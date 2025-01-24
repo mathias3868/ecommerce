@@ -1,0 +1,37 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.search {
+  @include flexing();
+  @include column-gap(10px);
+  input {
+    width: 450px;
+    height: 40px;
+    @include font-style($size-medium, $weight-medium);
+    color: $text-color-black;
+    outline: none;
+    @include border-radius(5px);
+    background: $search-bg;
+    padding-left: 40px;
+    position: relative;
+  }
+  .iconsearch {
+    position: absolute;
+    left: 25rem;
+    top: 30px;
+  }
+
+  .searchButton {
+    padding: 11px 20px;
+    border: none;
+    @include border-radius(5px);
+    background: $search-bnt-bg;
+    display: inline-block;
+    color: $text-color-white;
+    cursor: pointer;
+    @include font-style($size-medium - 2px, $weight-medium);
+    &:hover {
+      background: $search-bnt-bg-hover;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "../../../../scss/mixing";
+@import "../../../../scss/variables";
+
+.productBox {
+  background: $bg-color-white;
+  min-width: 300px;
+  color: $text-color-black;
+  padding: 0 5px;
+  @include border-radius(5px);
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  // border: 5px solid $bg-border-color;
+
+  .productImg {
+    width: 300px;
+    &:nth-child(5) {
+      width: 70px;
+    }
+  }
+
+  .productName {
+    @include font-style($size-medium, $weight-medium);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 155px;
+    line-height: 1.5rem;
+    text-align: left;
+  }
+
+  .productPrice {
+    @include font-style($size-medium, $weight-medium);
+    text-align: left;
+    line-height: 1.5rem;
+  }
+
+  &:hover {
+    // background: $item-bg;
+    box-shadow: 0 0 6px $bg-border-color;
+    color: $text-color-reserved;
+    transform: scale(1.005);
+  }
+}

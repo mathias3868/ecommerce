@@ -1,0 +1,22 @@
+@import "../../../../scss/mixing";
+@import "../../../../scss/variables";
+
+.categoryNavBar {
+  border-right: 1px solid $bg-border-color;
+  padding: 30px 40px 0 0;
+  .categoryNavList {
+    list-style-type: none;
+    // padding: 5px 10px;
+    .categoryNavItem {
+      padding: 10px;
+      @include font-style($size-medium, $weight-medium);
+      a {
+        text-decoration: none;
+        color: $text-color-reserved;
+        &:hover {
+          color: $text-color-black;
+        }
+      }
+    }
+  }
+}

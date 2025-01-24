@@ -1,0 +1,20 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.addRemoveDiv {
+  @include flexing();
+  @include column-gap(10px);
+  justify-content: normal;
+  // margin-top: 30px;
+  max-width: 150px;
+
+  button {
+    @include font-style($size-largest - 2px, $weight-largest);
+    color: $text-color-white;
+    background: $search-bnt-bg;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,77 @@
+import React, { useEffect, useState } from "react";
+import { useItem } from "../../contexts/ItemContext";
+import { NavLink, useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import styles from "./description.module.scss";
+import cartIcon from "../../assets/icons/cartIconWhite2.png";
+
+import StarRate from "../../components/StarRate";
+import LoveImage from "../../assets/icons/LoveImage";
+import AddRemoveBtn from "./AddRemoveBtn";
+
+function Discription() {
+  // const [plusMinus, setPlusMinus] = useState(false);
+  // const [clicked, setClicked] = useState(0);
+  const { currentProduct, addToCart, cartedProducts } = useItem();
+  const { category } = useParams();
+  const {
+    image,
+    title,
+    description,
+    price,
+    // rating: { rate },
+  } = currentProduct;
+
+  const handleAddtoCart = () => {
+    console.log("Adding to cart:", currentProduct); // Log the product being added
+    addToCart(currentProduct);
+    // setClicked((clicked) => clicked + 1);
+  };
+
+  const productInCart = cartedProducts.find(
+    (item) => item.id === currentProduct.id
+  );
+
+  const quantityInCart = productInCart ? productInCart.quantity : 0;
+
+  console.log(quantityInCart);
+
+  return (
+    <div>
+      <NavLink to={"/"}>Home >> </NavLink>
+      <NavLink to={`/all_products/${category}`}>{category} >> </NavLink>
+      <NavLink>{title}</NavLink>
+      <div className={styles.descriptionBox}>
+        <div className={styles.descriptionImage}>
+          <img src={image} alt={`${title} Photo`} />
+        </div>
+        <div className={styles.details}>
+          <div className={styles.detailsHead}>
+            <div className={styles.tags}>
+              <p className={styles.tag1}>OFFICIAL STORE</p>
+              <p className={styles.tag2}>Free Delivery</p>
+            </div>
+            <LoveImage className={styles.loveIcon} />
+          </div>
+          <h3 className={styles.descriptionName}>{title}</h3>
+          <p className={styles.descriptionDetails}>{description}</p>
+          <h3 className={styles.descriptionPrice}>${price}</h3>
+          {/* <StarRate starRate={rate} color="#fcc419" defaultRate={rate} /> */}
+          {quantityInCart < 1 ? (
+            <button className={styles.detailsAddBtn} onClick={handleAddtoCart}>
+              <img src={cartIcon} alt="Icon photo" />
+              <span>Add to cart</span>
+            </button>
+          ) : (
+            <div className={styles.flexBtn}>
+              <AddRemoveBtn quantityInCart={quantityInCart} />
+              <p className={styles.count}>( {quantityInCart} item(s) added )</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Discription;

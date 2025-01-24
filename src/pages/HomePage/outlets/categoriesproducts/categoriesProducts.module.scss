@@ -1,0 +1,48 @@
+@import "../../../../scss/mixing";
+@import "../../../../scss/variables";
+
+// .productsBlock {
+//   @include flexing();
+//   @include row-gap(20px);
+//   @include column-gap(10px);
+//   flex-wrap: wrap;
+// }
+.main {
+  background: $bg-color-semi-white;
+  padding: 0 125px;
+
+  .ActiveCategory {
+    background: $bg-color-white;
+    @include font-style($size-medium, $weight-large);
+    text-align: center;
+    color: $text-color-reserved;
+    padding: 10px 10px;
+    margin: 20px 0;
+  }
+
+  .callOrder {
+    background: rgb(227, 227, 41);
+    @include font-style($size-medium, $weight-large);
+    text-align: center;
+    color: $text-color-black;
+    padding: 10px 10px;
+    margin: 0 0 20px 0;
+  }
+
+  a {
+    @include font-style($size-medium - 2px, $weight-medium);
+    text-decoration: none;
+    color: $text-color-black;
+    &:active {
+      color: $text-color-reserved;
+    }
+  }
+  .productsBlock {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 20px 10px;
+    justify-items: center;
+    background: $bg-color-white;
+    padding: 10px 20px;
+  }
+}

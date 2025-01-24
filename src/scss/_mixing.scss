@@ -1,0 +1,25 @@
+@mixin flexing() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin column-gap($column-gap) {
+  column-gap: $column-gap;
+}
+
+@mixin row-gap($row-gap) {
+  row-gap: $row-gap;
+}
+
+@mixin font-style($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: "poppins", serif;
+  font-style: normal;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  overflow: hidden;
+}

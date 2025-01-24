@@ -1,0 +1,115 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+div {
+  a {
+    @include font-style($size-medium - 2px, $weight-medium);
+    color: $text-color-black;
+    text-decoration: none;
+    line-height: 3rem;
+  }
+
+  .descriptionBox {
+    background: $bg-color-white;
+    flex-basis: 500px;
+    flex-shrink: 0;
+    // margin: 30px 0 0 0;
+    @include flexing();
+    padding: 20px 10px;
+    @include column-gap(20px);
+    align-items: normal;
+
+    .descriptionImage {
+      max-width: 400px;
+      img {
+        width: 350px;
+      }
+    }
+
+    .details {
+      max-width: 600px;
+
+      .detailsHead {
+        @include flexing();
+        justify-content: space-between;
+
+        .tags {
+          @include flexing();
+          @include column-gap(10px);
+          justify-content: normal;
+          margin-bottom: 15px;
+          .tag1 {
+            padding: 5px;
+            @include border-radius(3px);
+            background: #276076;
+            @include font-style($size-small, $weight-medium);
+            display: inline-block;
+            color: $text-color-white;
+          }
+          .tag2 {
+            padding: 3px;
+            @include border-radius(3px);
+            background: $search-bnt-bg;
+            @include font-style($size-small, $weight-medium - 100);
+            display: inline-block;
+            color: $text-color-white;
+          }
+        }
+      }
+
+      .descriptionName {
+        @include font-style($size-large, $weight-medium);
+        line-height: 1.5rem;
+      }
+      .descriptionDetails {
+        margin-top: 20px;
+        @include font-style($size-medium, $weight-medium);
+        line-height: 1.5rem;
+      }
+
+      .descriptionPrice {
+        @include font-style($size-large, $weight-medium);
+        line-height: 3rem;
+      }
+
+      .detailsAddBtn {
+        background: $search-bnt-bg;
+        outline: none;
+        border: none;
+        @include border-radius(5px);
+        display: block;
+        padding: 12px 10px;
+        @include flexing();
+        text-align: center;
+        width: 480px;
+        position: relative;
+        margin-top: 30px;
+        cursor: pointer;
+
+        img {
+          position: absolute;
+          left: 1rem;
+          width: 35px;
+        }
+
+        span {
+          text-align: center;
+          @include font-style($size-medium - 1px, $weight-large);
+          color: $text-color-white;
+        }
+      }
+
+      .flexBtn {
+        @include flexing();
+        align-items: center;
+        justify-content: normal;
+        margin-top: 30px;
+        @include column-gap(10px);
+
+        .count {
+          @include font-style($size-medium - 2px, $weight-medium);
+        }
+      }
+    }
+  }
+}

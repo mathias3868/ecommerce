@@ -1,0 +1,17 @@
+@import "../../../../scss/mixing";
+@import "../../../../scss/variables";
+
+// .productsBlock {
+//   @include flexing();
+//   @include row-gap(20px);
+//   @include column-gap(10px);
+//   flex-wrap: wrap;
+// }
+.productsBlock {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  gap: 10px 10px;
+  justify-items: center;
+  background: $bg-color-white;
+  padding: 10px 20px;
+}

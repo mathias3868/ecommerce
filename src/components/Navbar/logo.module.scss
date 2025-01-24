@@ -1,0 +1,12 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.logo {
+  @include flexing();
+  text-decoration: none;
+
+  h1 {
+    @include font-style($size-largest + 10px, $weight-largest);
+    color: $text-color-black;
+  }
+}

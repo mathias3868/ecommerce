@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "./scss/mixing";
+@import "./scss/variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  // padding: 0 50px;
+  background: $bg-color-white;
+}
+
+.topmessageNav {
+  background: $bg-color-black;
+  @include font-style($size-medium, $weight-large);
+  text-align: center;
+  color: $text-color-white;
+  padding: 10px 0;
+}
+
+.topmessagebody {
+  background: rgb(238, 60, 60);
+  @include font-style($size-medium, $weight-large);
+  text-align: center;
+  color: $text-color-white;
+  padding: 10px 10px;
+  @include flexing();
+  justify-content: space-between;
+  .time {
+    min-width: 200px;
+    @include flexing();
+    justify-content: space-between;
+    // border: 1px solid yellow;
+  }
+}
+
+.active {
+  color: $text-color-reserved;
+}
+
+.whishImg {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  @include border-radius(50%);
+
+  &:hover {
+    background: #efa06b;
+    box-shadow: 0 0 4px #e7aa82;
+  }
+}
+
+// const index = cartedProducts.findIndex((item) => item === action.payload);
+//       if (index !== -1) {
+//         cartedProducts.splice(index, 1);
+//       }
+//       return cartedProducts;
+
+// return {
+//   ...state,
+//   cartedProducts: state.cartedProducts
+//     .map((item) =>
+//       item.id === action.payload
+//         ? { ...item, quantity: item.quantity - 1 }
+//         : item
+//     )
+//     .filter((item) => item.quantity > 0),
+// };
+
+// return state
+//   .map((item) =>
+//     item.id === action.payload.id
+//       ? { ...item, quantity: item.quantity - 1 }
+//       : item
+//   )
+//   .filter((item) => item.quantity > 0);
+
+// const b = [...state.cartedProducts]
+// const itemExists = b.find(
+//   (item) => item.id === action.payload.id
+// );
+// itemExists.quantity=-1
+// console.log(b);
+
+// if (itemExists.id) {
+//   return {
+//     ...state,
+//     cartedProducts: b,
+//   };
+// }

@@ -1,0 +1,13 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.mainContainer {
+  background: $bg-color-semi-white;
+
+  .descriptionDiv {
+    padding: 0 125px;
+
+    @include flexing();
+    @include column-gap(10px);
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.appNavItem {
+  @include flexing();
+  @include column-gap(50px);
+  border-bottom: 1px solid $bg-border-color;
+  padding: 15px 100px 25px 100px;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  background: $bg-color-white;
+}

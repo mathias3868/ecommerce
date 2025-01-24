@@ -1,0 +1,69 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.dropDown {
+  .dropItem {
+    cursor: pointer;
+    span {
+      @include font-style($size-medium, $weight-medium);
+      color: $text-color-black;
+    }
+  }
+}
+
+.loginBtn {
+  padding: 11px 50px;
+  @include font-style($size-medium, $weight-medium);
+  color: $text-color-white;
+  text-align: center;
+  background: $login-btn-bg;
+  @include border-radius(5px);
+}
+
+.user {
+  // @include flexing();
+  text-decoration: none;
+  // display: flex;
+  align-items: center;
+
+  span {
+    @include font-style($size-medium, $weight-medium);
+    color: $text-color-reserved;
+  }
+}
+
+.order {
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  @include column-gap(5px);
+
+  .ordericon {
+    width: 37px;
+  }
+  span {
+    @include font-style($size-medium, $weight-medium);
+    color: $text-color-reserved;
+    &:hover {
+      @include font-style($size-medium + 2px, $weight-large);
+    }
+  }
+}
+
+.wish {
+  align-items: center;
+  display: flex;
+
+  .wishicon {
+    width: 40px;
+  }
+
+  span {
+    @include font-style($size-medium, $weight-medium);
+    color: $text-color-reserved;
+    &:hover {
+      @include font-style($size-medium + 2px, $weight-medium + 100);
+      color: $text-color-black;
+    }
+  }
+}

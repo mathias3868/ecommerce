@@ -1,0 +1,14 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+// .topmessageNav {
+//   background: $bg-color-black;
+//   @include font-style($size-medium, $weight-large);
+//   text-align: center;
+//   color: $text-color-white;
+//   padding: 10px 0;
+// }
+
+.container {
+  background: $bg-color-semi-white;
+}

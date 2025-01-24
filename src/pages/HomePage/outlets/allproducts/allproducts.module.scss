@@ -1,0 +1,14 @@
+@import "../../../../scss/mixing";
+@import "../../../../scss/variables";
+
+.allProductContainer {
+  padding: 0 125px;
+  // background: $bg-color-white;
+  background: #f1f1f2;
+  .allproductCol1 {
+    @include flexing();
+    @include column-gap(95px);
+    align-items: normal;
+    margin-bottom: 80px;
+  }
+}
