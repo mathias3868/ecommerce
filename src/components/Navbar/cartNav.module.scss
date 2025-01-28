@@ -1,0 +1,31 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.cart {
+  text-decoration: none;
+  color: $text-color-black;
+
+  div {
+    @include flexing();
+    // position: relative;
+    .cartName {
+      @include font-style($size-medium, $weight-medium);
+      color: $text-color-black;
+    }
+  }
+
+  .cartTotal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 19px;
+    right: 10.3rem;
+    @include font-style($size-small, $weight-medium);
+    width: 20px;
+    height: 20px;
+    background: $search-bnt-bg;
+    @include border-radius(50%);
+    color: $text-color-white;
+  }
+}

@@ -1,16 +1,16 @@
 import React from "react";
 import AppNavBar from "../../components/Navbar/AppNavBar";
 import Footer from "../../components/Footer/Footer";
-import WishItemsList from "./WishItemsList";
+import NotFound from "./NotFound";
 
-function WishList() {
+function NotFoundPage() {
   return (
     <div>
       <AppNavBar />
-      <WishItemsList />
+      <NotFound />
       <Footer />
     </div>
   );
 }
 
-export default WishList;
+export default NotFoundPage;

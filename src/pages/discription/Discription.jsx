@@ -12,7 +12,8 @@ import AddRemoveBtn from "./AddRemoveBtn";
 function Discription() {
   // const [plusMinus, setPlusMinus] = useState(false);
   // const [clicked, setClicked] = useState(0);
-  const { currentProduct, addToCart, cartedProducts } = useItem();
+  const { currentProduct, addToCart, cartedProducts, getCategoryProduct } =
+    useItem();
   const { category } = useParams();
   const {
     image,
@@ -28,6 +29,10 @@ function Discription() {
     // setClicked((clicked) => clicked + 1);
   };
 
+  const handleGetCategory = () => {
+    getCategoryProduct(category);
+  };
+
   const productInCart = cartedProducts.find(
     (item) => item.id === currentProduct.id
   );
@@ -39,7 +44,9 @@ function Discription() {
   return (
     <div>
       <NavLink to={"/"}>Home >> </NavLink>
-      <NavLink to={`/all_products/${category}`}>{category} >> </NavLink>
+      <NavLink to={`/all_products/${category}`} onClick={handleGetCategory}>
+        {category} >>{" "}
+      </NavLink>
       <NavLink>{title}</NavLink>
       <div className={styles.descriptionBox}>
         <div className={styles.descriptionImage}>
@@ -51,7 +58,10 @@ function Discription() {
               <p className={styles.tag1}>OFFICIAL STORE</p>
               <p className={styles.tag2}>Free Delivery</p>
             </div>
-            <LoveImage className={styles.loveIcon} />
+            <LoveImage
+              className={styles.loveIcon}
+              currentProduct={currentProduct}
+            />
           </div>
           <h3 className={styles.descriptionName}>{title}</h3>
           <p className={styles.descriptionDetails}>{description}</p>
@@ -66,6 +76,7 @@ function Discription() {
             <div className={styles.flexBtn}>
               <AddRemoveBtn quantityInCart={quantityInCart} />
               <p className={styles.count}>( {quantityInCart} item(s) added )</p>
+              {/* <h2>{cartedProducts.length}</h2> */}
             </div>
           )}
         </div>

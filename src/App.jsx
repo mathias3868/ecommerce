@@ -12,6 +12,7 @@ import AllProductsCat from "./pages/HomePage/outlets/allproducts/AllProductsCat"
 import CategoriesProducts from "./pages/HomePage/outlets/categoriesproducts/CategoriesProducts";
 import ProductDiscription from "./pages/discription/ProductDiscription";
 import WishList from "./pages/WishlistPage/WishList";
+import NotFoundPage from "./pages/404Page/404";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="signup" element={<Signup />} />
           <Route path="wishlist" element={<WishList />} />
           <Route path="userdetails" element={<AccountDetails />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </ItemProvider>

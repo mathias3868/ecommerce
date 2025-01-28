@@ -4,6 +4,7 @@ import WishItem from "./WishItem";
 
 function WishItemsList() {
   const { wishedProducts } = useItem();
+  console.log(wishedProducts);
 
   return (
     <div>

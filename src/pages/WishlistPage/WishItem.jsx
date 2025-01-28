@@ -2,6 +2,8 @@ import React from "react";
 
 function WishItem({ favItem }) {
   const { image, title, price } = favItem;
+  console.log(title);
+
   return (
     <li>
       <div>
