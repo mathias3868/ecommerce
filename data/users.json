@@ -1,14 +1,16 @@
 {
   "users": [
     {
-      "eamil": "kanyechukwuekere@gmail.com",
+      "email": "kanyechukwuekere@gmail.com",
       "number": "09133134466",
-      "password": "Mathias@22.com"
+      "password": "Mathias@22.com",
+      "id": 1
     },
     {
-      "eamil": "ifediegwuchigozie43@gmail.com",
+      "email": "ifediegwuchigozie43@gmail.com",
       "number": "09123043868",
-      "password": "charlse@55.kom"
+      "password": "charlse@55.kom",
+      "id": 2
     }
   ]
 }

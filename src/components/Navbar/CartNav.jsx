@@ -11,7 +11,7 @@ function CartNav() {
     (acc, item) => acc + item.quantity,
     0
   );
-  console.log(totalQuantity); // 3
+  // console.log(totalQuantity); // 3
 
   return (
     <NavLink to={"/cart"} className={styles.cart}>

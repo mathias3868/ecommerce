@@ -13,35 +13,38 @@ import CategoriesProducts from "./pages/HomePage/outlets/categoriesproducts/Cate
 import ProductDiscription from "./pages/discription/ProductDiscription";
 import WishList from "./pages/WishlistPage/WishList";
 import NotFoundPage from "./pages/404Page/404";
+import { AuthProvider } from "./contexts/AuthContext";
 
 function App() {
   return (
-    <ItemProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />}>
-            <Route index element={<Navigate replace to={"all_products"} />} />
-            <Route path="all_products" element={<AllProductsCat />} />
+    <AuthProvider>
+      <ItemProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />}>
+              <Route index element={<Navigate replace to={"all_products"} />} />
+              <Route path="all_products" element={<AllProductsCat />} />
+              <Route
+                path="/all_products/:category"
+                element={<CategoriesProducts />}
+              />
+            </Route>
             <Route
-              path="/all_products/:category"
-              element={<CategoriesProducts />}
+              path="/products/:category/:id"
+              element={<ProductDiscription />}
             />
-          </Route>
-          <Route
-            path="/products/:category/:id"
-            element={<ProductDiscription />}
-          />
-          <Route path="about" element={<About />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="login" element={<Login />} />
-          <Route path="signup" element={<Signup />} />
-          <Route path="wishlist" element={<WishList />} />
-          <Route path="userdetails" element={<AccountDetails />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </BrowserRouter>
-    </ItemProvider>
+            <Route path="about" element={<About />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="wishlist" element={<WishList />} />
+            <Route path="userdetails" element={<AccountDetails />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </BrowserRouter>
+      </ItemProvider>
+    </AuthProvider>
   );
 }
 
