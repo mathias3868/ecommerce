@@ -7,7 +7,7 @@
 
   div {
     @include flexing();
-    // position: relative;
+    position: relative;
     .cartName {
       @include font-style($size-medium, $weight-medium);
       color: $text-color-black;
@@ -20,7 +20,7 @@
     align-items: center;
     position: absolute;
     top: 19px;
-    right: 10.3rem;
+    right: 9.7rem;
     @include font-style($size-small, $weight-medium);
     width: 20px;
     height: 20px;

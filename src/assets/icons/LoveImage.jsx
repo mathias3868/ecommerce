@@ -2,30 +2,30 @@ import React, { useState } from "react";
 import { useItem } from "../../contexts/ItemContext";
 import { useParams } from "react-router-dom";
 
-function LoveImage({ currentProduct }) {
+function LoveImage({ currentProduct, isFavorite }) {
   const { addToWishes, removeFromWishes, wishedProducts } = useItem();
   const [filled, setFilled] = useState(false);
   // const { id } = useParams();
 
-  const isFavorite = wishedProducts.some((fav) => fav.id === currentProduct.id);
+  // const isFavorite = wishedProducts.some((fav) => fav.id === currentProduct.id);
 
   const handleAdd = () => {
-    if (!isFavorite) {
-      addToWishes(currentProduct);
-      setFilled(true);
-    }
+    addToWishes(currentProduct);
+    setFilled(true);
+    // if (!isFavorite) {
+    // }
   };
 
   const handleRemove = () => {
-    if (isFavorite) {
-      removeFromWishes(currentProduct);
-      setFilled(false);
-    }
+    removeFromWishes(currentProduct);
+    setFilled(false);
+    // if (isFavorite) {
+    // }
   };
 
   return (
     <span className="whishImg">
-      {!isFavorite ? (
+      {!isFavorite && !filled ? (
         <svg
           onClick={handleAdd}
           version="1.1"

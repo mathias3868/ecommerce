@@ -12,8 +12,13 @@ import AddRemoveBtn from "./AddRemoveBtn";
 function Discription() {
   // const [plusMinus, setPlusMinus] = useState(false);
   // const [clicked, setClicked] = useState(0);
-  const { currentProduct, addToCart, cartedProducts, getCategoryProduct } =
-    useItem();
+  const {
+    currentProduct,
+    addToCart,
+    cartedProducts,
+    getCategoryProduct,
+    wishedProducts,
+  } = useItem();
   const { category } = useParams();
   const {
     image,
@@ -41,6 +46,8 @@ function Discription() {
 
   console.log(quantityInCart);
 
+  const isFavorite = wishedProducts.some((fav) => fav.id === currentProduct.id);
+
   return (
     <div>
       <NavLink to={"/"}>Home >> </NavLink>
@@ -60,6 +67,7 @@ function Discription() {
             </div>
             <LoveImage
               className={styles.loveIcon}
+              isFavorite={isFavorite}
               currentProduct={currentProduct}
             />
           </div>

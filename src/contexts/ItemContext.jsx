@@ -107,13 +107,22 @@ function reducer(state, action) {
       };
 
     case "add/to/wishes":
-      if (state.wishedProducts.find((item) => item === action.payload.id)) {
-        return state;
-      }
+      const exist = state.wishedProducts.some(
+        (item) => item.id === action.payload
+      );
+      if (exist) return state;
+
       return {
         ...state,
         wishedProducts: [...state.wishedProducts, action.payload],
       };
+    // if (state.wishedProducts.find((item) => item === action.payload.id)) {
+    //   return state;
+    // }
+    // return {
+    //   ...state,
+    //   wishedProducts: [...state.wishedProducts, action.payload],
+    // };
 
     case "remove/from/wishes":
       return {

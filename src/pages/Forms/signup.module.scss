@@ -1,0 +1,110 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.signupContainer {
+  @include flexing();
+  padding: 50px 125px;
+  justify-content: normal;
+  @include column-gap(20px);
+
+  .formCol1 {
+    min-width: 650px;
+    // border: 1px solid red;
+    object-fit: cover;
+    img {
+      width: 620px;
+    }
+  }
+
+  .formCol2 {
+    // border: 1px solid red;
+    min-width: 600px;
+    text-align: center;
+    @include flexing();
+    align-items: center;
+    flex-direction: column;
+    .welcome {
+      margin-bottom: 20px;
+
+      img {
+        width: 80px;
+      }
+
+      .welcomeText {
+        @include font-style($size-large, $weight-large);
+        color: $text-color-black;
+        line-height: 2rem;
+      }
+      p {
+        max-width: 500px;
+        @include font-style($size-medium, $weight-medium);
+        line-height: 1.5rem;
+        color: $text-color-reserved;
+      }
+    }
+
+    form {
+      input {
+        display: block;
+        width: 450px;
+        height: 50px;
+        outline: none;
+        padding: 8px 5px;
+        @include border-radius(5px);
+        border: 2px solid $bg-border-color;
+        @include font-style($size-medium, $weight-medium);
+        color: $text-color-black;
+        margin-top: 20px;
+      }
+
+      .createBtn {
+        display: block;
+        padding: 10px 15px;
+        width: 450px;
+        @include font-style($size-medium + 2px, $weight-medium);
+        background: $search-bnt-bg;
+        color: $text-color-white;
+        border: none;
+        outline: none;
+        @include border-radius(5px);
+        cursor: pointer;
+        margin: 40px 0 20px 0;
+        transition: background 0.05s ease-in-out;
+        &:hover {
+          background: $search-bnt-bg-hover;
+        }
+      }
+    }
+    small {
+      @include font-style($size-medium - 2, $weight-medium);
+      color: $text-color-black;
+      line-height: 1rem;
+      // max-width: 500px;
+
+      a {
+        text-decoration: underline;
+        color: rgb(102, 102, 236);
+        @include font-style($size-medium - 1, $weight-medium);
+        display: block;
+        line-height: 1.5rem;
+      }
+    }
+    .facebook {
+      background: #1877f2;
+      @include font-style($size-medium, $weight-medium);
+      color: $text-color-white;
+      display: block;
+      padding: 10px 15px;
+      width: 450px;
+      @include border-radius(5px);
+      margin: 20px 0 20px 0;
+    }
+
+    .lastText {
+      max-width: 400px;
+      @include font-style($size-medium - 1px, $weight-medium);
+      line-height: 1.2rem;
+      color: $text-color-reserved;
+    }
+  }
+}

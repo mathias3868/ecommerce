@@ -1,0 +1,54 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.listItem {
+  @include flexing();
+  max-width: 900px;
+  height: fit-content;
+  // border: 1px solid red;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: normal;
+  cursor: pointer;
+  border-bottom: 2px solid $bg-border-color;
+
+  .listItemCol1 {
+    @include flexing();
+    align-items: normal;
+    column-gap: 20px;
+    img {
+      width: 100px;
+    }
+    h4 {
+      @include font-style($size-medium + 2, $weight-medium);
+      line-height: 4rem;
+    }
+  }
+
+  .removeBtn {
+    @include flexing();
+    justify-content: normal;
+    cursor: pointer;
+    padding: 0 8px;
+    width: 112px;
+    @include border-radius(5px);
+    margin-top: 10px;
+    // display: inline-block;
+    p {
+      @include font-style($size-medium - 1, $weight-large - 100);
+      color: $search-bnt-bg-hover;
+    }
+    &:hover {
+      background: #dda681;
+    }
+  }
+
+  .listItemCol2 {
+    p {
+      @include font-style($size-medium, $weight-large);
+      color: #000;
+      line-height: 4rem;
+      margin-bottom: 40px;
+    }
+  }
+}

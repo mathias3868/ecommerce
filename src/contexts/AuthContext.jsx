@@ -4,52 +4,59 @@ const Base_Url = "http://localhost:60001";
 const authContext = createContext();
 
 const initialState = {
-  isAuthenticated: false,
-  currentUser: null,
   accounts: [],
+  currentUser: null,
+  isLoading: false,
   error: "",
+  isAuthenticated: false,
 };
 
 function reducer(state, action) {
   switch (action.type) {
-    case "accounts/loaded":
+    case "users/loaded":
       return { ...state, isLoading: false, accounts: action.payload };
 
-    case "user/logged/in":
-      const { input, password } = action.payload;
-      const user = state.accounts.find(
-        (user) =>
-          (user.email === input || user.number === input) &&
-          user.password === password
-      );
-      if (user) {
-        return {
-          ...state,
-          currentUser: user,
-          error: "",
-          isAuthenticated: true,
-        };
-      }
-      return { ...state, error: action.payload };
+    case "user/login":
+      return {
+        ...state,
+        isLoading: false,
+        currentUser: action.payload,
+        isAuthenticated: true,
+      };
+
+    // const { input, password } = action.payload;
+    // const user = state.accounts.find(
+    //   (user) =>
+    //     (user.email === input || user.number === input) &&
+    //     user.password === password
+    // );
+    // if (user) {
+    //   return {
+    //     ...state,
+    //     currentUser: action.payload,
+    //     isAuthenticated: true,
+    //   };
+    // }
+    // return { ...state };
 
     case "newUser/signUp":
-      const { input, password } = action.payload;
-      const userExist = state.accounts.some(
-        (user) => user.email === input || user.number === input
-      );
+      // const { input, password } = action.payload;
+      // const userExist = state.accounts.some(
+      //   (user) => user.email === input || user.number === input
+      // );
 
-      if (userExist) {
-        return { ...state, error: action.payload };
-      }
+      // if (userExist) {
+      //   return { ...state };
+      // }
 
-      const newUser = /\@/.test(input)
-        ? { email: input, password }
-        : { phone: input, password };
+      // const newUser = /\@/.test(input)
+      //   ? { email: input, password }
+      //   : { phone: input, password };
 
       return {
         ...state,
-        accounts: [...state.accounts, newUser],
-        error: action.payload,
+        accounts: [...state.accounts, action.payload],
+        currentUser: action.payload,
         isAuthenticated: true,
       };
 
@@ -57,7 +64,6 @@ function reducer(state, action) {
       return {
         ...state,
         currentUser: null,
-        error: action.paload,
         isAuthenticated: false,
       };
 
@@ -70,49 +76,94 @@ function reducer(state, action) {
 }
 
 function AuthProvider({ children }) {
-  const [{ currentUser, accounts, error, isAuthenticated }, dispatch] =
-    useReducer(reducer, initialState);
+  const [
+    { currentUser, accounts, error, isLoading, isAuthenticated },
+    dispatch,
+  ] = useReducer(reducer, initialState);
 
   useEffect(function () {
     async function fetchAccounts() {
       try {
         const req = await fetch(`${Base_Url}/users`);
         const data = await req.json();
-        dispatch({ type: "users/loaded", payload: data });
+        // dispatch({ type: "users/loaded", payload: data });
         console.log(data);
       } catch {
         dispatch({
-          type: "rejectec",
-          payload: "there is error in fectching datas",
+          type: "rejected",
+          payload: "there is error in fetching data",
         });
       }
     }
     fetchAccounts();
   }, []);
 
-  async function login(input, password) {
+  // async function login(input, password) {
+  //   try {
+  //     const req = await fetch(`${Base_Url}/users`);
+  //     const data = await req.json();
+  //     const user = data.find(
+  //       (user) =>
+  //         (user.email === input || user.number === input) &&
+  //         user.password === password
+  //     );
+
+  //     dispatch({ type: "user/logged/in", payload: user });
+  //   } catch {
+  //     throw new Error("there is error in logging accout with data");
+  //   }
+  // }
+
+  async function login(emailOrNumber, password) {
     try {
       const req = await fetch(`${Base_Url}/users`);
       const data = await req.json();
-      data.email === input ||
-        (data.number === input && data.password === password);
-      dispatch({ type: "user/logged/in" });
-    } catch {}
+      console.log(data);
+
+      const user = data.find(
+        (user) =>
+          (user.email === emailOrNumber.trim() ||
+            user.number === emailOrNumber.trim()) &&
+          user.password === password
+      );
+      console.log(user);
+
+      dispatch({ type: "user/login", payload: user });
+    } catch {
+      dispatch({
+        type: "rejected",
+        payload: "there is error in logging accout with data",
+      });
+    }
   }
 
-  async function CreateAccount(newAccount) {
+  async function CreateAccount(newUser) {
+    // const newUser = {
+    //   email: emailOrNumber.includes("@") ? emailOrNumber : "",
+    //   phone: emailOrNumber.includes("@") ? "" : emailOrNumber,
+    //   password: password,
+    // };
     try {
       const res = await fetch(`${Base_Url}/users/`, {
         method: "POST",
-        body: JSON.stringify(newAccount),
+        body: JSON.stringify(newUser),
         headers: {
           "Cotent-Type": "Application/JSON",
         },
       });
       const data = await res.json();
-      // console.log(data);
+      console.log(data.newUser);
       dispatch({ type: "newUser/signUp", payload: data });
-    } catch {}
+    } catch {
+      dispatch({
+        type: "rejected",
+        payload: "there is error in creating accout with data",
+      });
+    }
+  }
+
+  function logout() {
+    dispatch({ type: "user/logout" });
   }
 
   return (
@@ -121,9 +172,11 @@ function AuthProvider({ children }) {
         currentUser,
         accounts,
         error,
+        isLoading,
         isAuthenticated,
         login,
         CreateAccount,
+        logout,
       }}>
       {children}
     </authContext.Provider>
