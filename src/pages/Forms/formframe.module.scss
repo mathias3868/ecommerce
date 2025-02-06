@@ -1,0 +1,18 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.fromSectionContainer {
+  @include flexing();
+  padding: 50px 125px;
+  justify-content: normal;
+  @include column-gap(20px);
+
+  .formCol1 {
+    min-width: 650px;
+    // border: 1px solid red;
+    object-fit: cover;
+    img {
+      width: 620px;
+    }
+  }
+}

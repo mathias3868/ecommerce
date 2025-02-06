@@ -1,0 +1,54 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.mainMain {
+  margin-top: 20px;
+  background: $bg-color-black;
+
+  .footerMainContainer {
+    @include flexing();
+    align-items: normal;
+    justify-content: space-around;
+    @include column-gap(50px);
+    padding: 50px 100px;
+    color: $text-color-white;
+
+    h2 {
+      @include font-style($size-largest, $weight-largest);
+      line-height: 3rem;
+    }
+
+    h4 {
+      @include font-style($size-large, $weight-large - 100);
+      line-height: 3rem;
+    }
+
+    p {
+      @include font-style($size-medium, $weight-medium);
+      line-height: 2rem;
+    }
+
+    small {
+      @include font-style($size-medium - 2px, $weight-medium - 100);
+      line-height: 1.5rem;
+    }
+
+    a {
+      @include font-style($size-medium - 2px, $weight-medium);
+      color: $text-color-white;
+    }
+  }
+
+  hr {
+    margin: 0 12px;
+  }
+
+  .copywriteMessage {
+    @include font-style($size-medium, $weight-medium - 100);
+    color: $text-color-reserved;
+    text-align: center;
+    border-top: 1px solid $bg-border-color;
+    padding: 25px 0;
+    margin: 0 20px;
+  }
+}

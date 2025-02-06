@@ -1,12 +1,14 @@
 {
   "users": [
     {
-      "emailOrNumber": "kanyechukwuekere@gmail.com",
+      "email": "kanyechukwuekere@gmail.com",
       "password": "Mathias@22.com",
+      "number": "09123043868",
       "id": 1
     },
     {
-      "emailOrNumber": "ifediegwuchigozie43@gmail.com",
+      "email": "ifediegwuchigozie43@gmail.com",
+      "number": "09133134466",
       "password": "charlse@55.kom",
       "id": 2
     }

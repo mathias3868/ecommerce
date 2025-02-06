@@ -1,0 +1,28 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.footerSub {
+  min-width: 150px;
+  // border: 1px solid red;
+
+  input {
+    width: 180px;
+    background: $bg-color-white;
+    border: none;
+    color: $text-color-reserved;
+    height: 40px;
+    position: relative;
+    @include font-style($size-medium - 2px, $weight-medium);
+    margin-top: 20px;
+    outline: none;
+    padding: 5px 3px;
+    @include border-radius(5px);
+  }
+
+  .sendIcon {
+    position: absolute;
+    left: 15rem;
+    // border: 1px solid red;
+    margin-top: 18px;
+  }
+}

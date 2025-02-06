@@ -1,0 +1,32 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.footerGet {
+  max-width: 300px;
+  // border: 1px solid red;
+
+  .getFlex1 {
+    @include flexing();
+    align-items: center;
+    margin-top: 20px;
+
+    .QrCode {
+      width: 120px;
+    }
+
+    .appStore {
+      width: 170px;
+    }
+  }
+
+  .getFlex2 {
+    max-width: 290px;
+    @include flexing();
+    justify-content: space-between;
+    margin-top: 10px;
+    img {
+      width: 45px;
+      object-fit: cover;
+    }
+  }
+}

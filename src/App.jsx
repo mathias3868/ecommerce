@@ -14,6 +14,7 @@ import ProductDiscription from "./pages/discription/ProductDiscription";
 import WishList from "./pages/WishlistPage/WishList";
 import NotFoundPage from "./pages/404Page/404";
 import { AuthProvider } from "./contexts/AuthContext";
+import FormFrame from "./pages/Forms/FormFrame";
 
 function App() {
   return (
@@ -36,8 +37,11 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="cart" element={<Cart />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="login" element={<Login />} />
-            <Route path="signup" element={<Signup />} />
+            <Route path="form" element={<FormFrame />}>
+              <Route index element={<Navigate replace to={"login"} />} />
+              <Route path="login" element={<Login />} />
+              <Route path="signup" element={<Signup />} />
+            </Route>
             <Route path="wishlist" element={<WishList />} />
             <Route path="userdetails" element={<AccountDetails />} />
             <Route path="*" element={<NotFoundPage />} />

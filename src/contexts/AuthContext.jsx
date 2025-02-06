@@ -137,22 +137,17 @@ function AuthProvider({ children }) {
     }
   }
 
-  async function CreateAccount(newUser) {
-    // const newUser = {
-    //   email: emailOrNumber.includes("@") ? emailOrNumber : "",
-    //   phone: emailOrNumber.includes("@") ? "" : emailOrNumber,
-    //   password: password,
-    // };
+  async function createAccount(user) {
     try {
-      const res = await fetch(`${Base_Url}/users/`, {
+      const response = await fetch(`${Base_Url}/users`, {
         method: "POST",
-        body: JSON.stringify(newUser),
         headers: {
-          "Cotent-Type": "Application/JSON",
+          "Content-Type": "application/json",
         },
+        body: JSON.stringify(user),
       });
-      const data = await res.json();
-      console.log(data.newUser);
+
+      const data = await response.json();
       dispatch({ type: "newUser/signUp", payload: data });
     } catch {
       dispatch({
@@ -175,7 +170,7 @@ function AuthProvider({ children }) {
         isLoading,
         isAuthenticated,
         login,
-        CreateAccount,
+        createAccount,
         logout,
       }}>
       {children}
