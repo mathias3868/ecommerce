@@ -1,0 +1,58 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.totalPriceContainer {
+  min-width: 320px;
+  background: $bg-color-white;
+  box-shadow: 0 0 2px $bg-color-semi-white;
+  height: fit-content;
+  padding: 10px;
+  @include border-radius(5px 5px 0 0);
+
+  .totalHead {
+    @include font-style($size-medium, $weight-large - 100);
+    border-bottom: 0.3px solid #e7e4e4;
+    line-height: 2rem;
+    color: $text-color-black;
+  }
+
+  .totalpricecol1 {
+    @include flexing();
+    justify-content: space-between;
+
+    p {
+      @include font-style($size-medium - 2px, $weight-medium);
+      color: $text-color-black;
+      line-height: 2rem;
+    }
+
+    h5 {
+      @include font-style($size-medium, $weight-medium + 100);
+      color: $text-color-black;
+      line-height: 2rem;
+    }
+  }
+
+  small {
+    display: block;
+    @include font-style($size-medium - 2px, $weight-medium - 100);
+    color: $text-color-black;
+    line-height: 2rem;
+    border-bottom: 0.3px solid #e7e4e4;
+  }
+
+  .checkoutBtn {
+    display: block;
+    background: $search-bnt-bg;
+    color: $text-color-white;
+    @include font-style($size-medium, $weight-large - 100);
+    border: none;
+    outline: none;
+    text-align: center;
+    padding: 10px;
+    @include border-radius(3px);
+    width: 300px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+}

@@ -4,7 +4,8 @@
 .addRemoveDiv {
   @include flexing();
   @include column-gap(10px);
-  justify-content: normal;
+  justify-content: center;
+  align-items: center;
   // margin-top: 30px;
   max-width: 150px;
 
@@ -16,5 +17,11 @@
     outline: none;
     border: none;
     cursor: pointer;
+  }
+  .count {
+    line-height: 2rem;
+    font-size: $size-medium + 2px;
+    font-weight: 500;
+    display: inline-block;
   }
 }

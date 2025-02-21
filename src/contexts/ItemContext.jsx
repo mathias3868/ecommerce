@@ -19,7 +19,7 @@ const initialState = {
   categoryproducts: [], // Fixed typo
   wishedProducts: JSON.parse(localStorage.getItem("favorite")),
   cartedProducts: JSON.parse(localStorage.getItem("cart")),
-  totaPrice: 0,
+  totalPrice: 0,
 };
 
 function reducer(state, action) {
@@ -62,6 +62,13 @@ function reducer(state, action) {
         ],
       };
 
+    // const updatedPrice = state.cartedProducts.reduce(
+    //   (acc, item) => acc + item.price * item.quantity,
+    //   0
+    // );
+
+    // return { ...state, cartedProducts: [...state], totalPrice: updatedPrice };
+
     // const existingItem = state.find((item) => item.id === action.payload.id);
     // if (existingItem) {
     //   return state.map((item) =>
@@ -95,6 +102,16 @@ function reducer(state, action) {
             (item) => item.id !== action.payload.id
           ),
         };
+        // const updatedPrice = state.cartedProducts.reduce(
+        //   (acc, item) => acc + item.price * item.quantity,
+        //   0
+        // );
+
+        // return {
+        //   ...state,
+        //   cartedProducts: [...state],
+        //   totalPrice: updatedPrice,
+        // };
       }
       return state; // If the item doesn't exist in the cart, return the state unchanged
 
@@ -149,6 +166,7 @@ function ItemProvider({ children }) {
       categoryproducts, // Fixed typo
       wishedProducts,
       cartedProducts,
+      totalPrice,
     },
     dispatch,
   ] = useReducer(reducer, initialState);
@@ -265,6 +283,7 @@ function ItemProvider({ children }) {
         categoryproducts, // Fixed typo
         wishedProducts,
         cartedProducts,
+        totalPrice,
         getCategoryProduct,
         getProduct,
         addToCart,

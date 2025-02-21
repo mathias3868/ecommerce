@@ -1,0 +1,10 @@
+@import "../../scss/mixing";
+@import "../../scss/variables";
+
+.wishlistContainer {
+  background-color: $bg-color-semi-white;
+
+  .wishlistSection {
+    padding: 50px 125px;
+  }
+}

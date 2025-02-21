@@ -1,0 +1,52 @@
+@import "../scss/mixing";
+@import "../scss/variables";
+
+section {
+  padding: 50px 125px;
+
+  .meaasgeBody {
+    @include flexing();
+    height: 70vh;
+    width: 900px;
+    align-items: center;
+    flex-direction: column;
+    background: $bg-color-white;
+    margin: auto;
+    @include border-radius(5px);
+
+    .messageImage {
+      width: 200px;
+      margin-top: 80px;
+    }
+
+    h4 {
+      @include font-style($size-large, $weight-large - 100);
+      line-height: 2rem;
+      color: #313133;
+    }
+
+    p {
+      max-width: 480px;
+      @include font-style($size-medium - 2px, $weight-medium);
+      line-height: 1.5rem;
+      color: #313133;
+    }
+
+    .messageBtn {
+      background: $search-bnt-bg;
+      @include font-style($size-medium, $weight-large);
+      color: $text-color-white;
+      padding: 20px 30px;
+      outline: none;
+      border: none;
+      @include border-radius(5px);
+      margin: 20px 0 100px 0;
+      cursor: pointer;
+      text-align: center;
+
+      &:hover {
+        background: $search-bnt-bg-hover;
+      }
+    }
+  }
+}

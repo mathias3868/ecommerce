@@ -3,21 +3,21 @@
 
 .listItem {
   @include flexing();
-  max-width: 900px;
+  max-width: 930px;
   height: fit-content;
   // border: 1px solid red;
   justify-content: space-between;
   padding: 10px 20px;
   align-items: normal;
   cursor: pointer;
-  border-bottom: 2px solid $bg-border-color;
+  border-bottom: 2px solid #b3b3b3;
 
   .listItemCol1 {
     @include flexing();
-    align-items: normal;
+    align-items: center;
     column-gap: 20px;
     img {
-      width: 100px;
+      width: 90px;
     }
     h4 {
       @include font-style($size-medium + 2, $weight-medium);
@@ -44,7 +44,7 @@
   }
 
   .listItemCol2 {
-    p {
+    .pricing {
       @include font-style($size-medium, $weight-large);
       color: #000;
       line-height: 4rem;

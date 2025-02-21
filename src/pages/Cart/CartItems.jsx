@@ -3,10 +3,12 @@ import AddRemoveBtn from "../discription/AddRemoveBtn";
 import styles from "./cartItem.module.scss";
 import TrashBinSvg from "../../assets/icons/TrashBinSvg";
 import { useItem } from "../../contexts/ItemContext";
+import { useNavigate } from "react-router-dom";
 
-function CratItems({ cartproduct }) {
-  const { image, title, price, id } = cartproduct;
-  const { removeFromCart, cartedProducts } = useItem();
+function CartItems({ cartproduct }) {
+  const { image, title, price, id, category } = cartproduct;
+  const { removeFromCart, cartedProducts, getProduct } = useItem();
+  const navigate = useNavigate();
 
   function handleRemove() {
     const confirmed = window.confirm(
@@ -19,8 +21,13 @@ function CratItems({ cartproduct }) {
 
   const quantityInCart = productInCart ? productInCart.quantity : 0;
 
+  function handleGettingProd() {
+    getProduct(id);
+    navigate(`/products/${category}/${id}`);
+  }
+
   return (
-    <li className={styles.listItem}>
+    <li className={styles.listItem} onClick={handleGettingProd}>
       <div>
         <div className={styles.listItemCol1}>
           <img src={image} alt={`${title} Photo`} />
@@ -32,11 +39,11 @@ function CratItems({ cartproduct }) {
         </div>
       </div>
       <div className={styles.listItemCol2}>
-        <p>${price}</p>
+        <p className={styles.pricing}>${price}</p>
         <AddRemoveBtn quantityInCart={quantityInCart} />
       </div>
     </li>
   );
 }
 
-export default CratItems;
+export default CartItems;

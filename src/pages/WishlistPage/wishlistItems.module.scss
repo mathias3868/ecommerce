@@ -1,6 +1,7 @@
 @import "../../scss/mixing";
 @import "../../scss/variables";
 
-.cartContainer {
-  background: $bg-color-semi-white;
+.wishList {
+  min-width: 600px;
+  list-style-type: none;
 }

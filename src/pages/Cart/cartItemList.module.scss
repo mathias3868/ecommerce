@@ -1,7 +1,25 @@
-section {
+@import "../../scss/mixing";
+@import "../../scss/variables";
+.cartDivision {
   padding: 50px 125px;
+  box-shadow: 0 0 2p $bg-color-semi-white;
+  @include flexing();
+  justify-content: center;
+  align-items: normal;
+  @include column-gap(20px);
 
   .list {
+    background: $bg-color-white;
     list-style-type: none;
+    min-width: 930px;
+    @include border-radius(5px 5px 0 0);
+
+    .cart {
+      @include font-style($size-large + 5px, $weight-large);
+      max-width: 930px;
+      border-bottom: 0.3px solid #e7e4e4;
+      line-height: 3rem;
+      padding: 10px 20px;
+    }
   }
 }
