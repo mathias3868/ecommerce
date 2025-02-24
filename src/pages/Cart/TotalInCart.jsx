@@ -15,15 +15,23 @@ function TotalInCart() {
   const total = Math.round(totalPrice);
 
   return (
-    <div className={styles.totalPriceContainer}>
-      <p className={styles.totalHead}>CART SUMMARY</p>
-      <div className={styles.totalpricecol1}>
-        <p>subtotal</p>
-        <h5>${total}</h5>
-      </div>
-      <small>Delivery fee not included yet</small>
+    <div>
+      <div className={styles.totalPriceContainer}>
+        <p className={styles.totalHead}>CART SUMMARY</p>
+        <div className={styles.totalpricecol1}>
+          <p>subtotal</p>
+          <h5>${total}</h5>
+        </div>
+        <small>Delivery fee not included yet</small>
 
-      <Button className={styles.checkoutBtn}>Checkout (${total})</Button>
+        <Button className={styles.checkoutBtn}>Checkout (${total})</Button>
+      </div>
+
+      <div className={styles.returningDetailsContainer}>
+        <p>Returns are easy</p>
+        <small>Free returns within 7 days for ALL eligible items </small>
+        <a href="#">Details</a>
+      </div>
     </div>
   );
 }

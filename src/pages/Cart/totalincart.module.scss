@@ -56,3 +56,28 @@
     cursor: pointer;
   }
 }
+
+.returningDetailsContainer {
+  min-width: 320px;
+  background: $bg-color-white;
+  box-shadow: 0 0 2px $bg-color-semi-white;
+  height: fit-content;
+  padding: 10px;
+  @include border-radius(5px 5px 0 0);
+  margin-top: 20px;
+
+  p {
+    @include font-style($size-medium - 2px, $weight-large - 100);
+    color: $text-color-black;
+  }
+  small {
+    @include font-style($size-medium - 3px, $weight-medium - 100);
+    color: $text-color-black;
+  }
+
+  a {
+    @include font-style($size-medium - 2px, $weight-medium - 100);
+    color: rgb(124, 124, 240);
+    line-height: normal;
+  }
+}
