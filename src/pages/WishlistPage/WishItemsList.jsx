@@ -20,11 +20,14 @@ function WishItemsList() {
     );
 
   return (
-    <ul className={styles.wishList}>
-      {wishedProducts.map((favItem) => (
-        <WishItem favItem={favItem} key={favItem.id} />
-      ))}
-    </ul>
+    <section>
+      <ul className={styles.wishList}>
+        <p className={styles.wish}>WHISHLIST</p>
+        {wishedProducts.map((favItem) => (
+          <WishItem favItem={favItem} key={favItem.id} />
+        ))}
+      </ul>
+    </section>
   );
 }
 

@@ -1,12 +1,6 @@
 @import "../../../../scss/mixing";
 @import "../../../../scss/variables";
 
-// .productsBlock {
-//   @include flexing();
-//   @include row-gap(20px);
-//   @include column-gap(10px);
-//   flex-wrap: wrap;
-// }
 .productsBlock {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
@@ -14,4 +8,13 @@
   justify-items: center;
   background: $bg-color-white;
   padding: 10px 20px;
+}
+
+@media (max-width: 320px) {
+  .productsBlock {
+    padding: 10px 5px;
+    grid-template-columns: repeat(auto-fit, minmax(125px, auto));
+    // padding: 0;
+    gap: 10px 5px;
+  }
 }

@@ -29,17 +29,17 @@
     @include flexing();
     justify-content: normal;
     cursor: pointer;
-    padding: 0 8px;
+    // padding: 0 0;
     width: 112px;
     @include border-radius(5px);
     margin-top: 10px;
     // display: inline-block;
     p {
-      @include font-style($size-medium - 1, $weight-large - 100);
+      @include font-style($size-medium - 2px, $weight-large - 100);
       color: $search-bnt-bg-hover;
     }
     &:hover {
-      background: #dda681;
+      background: #fcdbb9;
     }
   }
 
@@ -49,6 +49,14 @@
       color: #000;
       line-height: 4rem;
       margin-bottom: 40px;
+    }
+  }
+}
+
+:root {
+  .modalCustom {
+    .ant-modal-content {
+      width: 700px !important;
     }
   }
 }

@@ -12,3 +12,12 @@
     margin-bottom: 80px;
   }
 }
+
+@media (max-width: 320px) {
+  .allProductContainer {
+    padding: 0 20px;
+    .allproductCol1 {
+      margin-bottom: 20px;
+    }
+  }
+}

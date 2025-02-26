@@ -5,11 +5,13 @@ import styles from "./addRemove.module.scss";
 function AddRemoveBtn({ quantityInCart }) {
   const { addToCart, removeByDecrement, currentProduct } = useItem();
 
-  const handleAddtoCart = () => {
+  const handleAddtoCart = (e) => {
+    e.stopPropagation();
     addToCart(currentProduct);
   };
 
-  const handleDecrementFromCart = () => {
+  const handleDecrementFromCart = (e) => {
+    e.stopPropagation();
     removeByDecrement(currentProduct);
     quantityInCart - 1;
   };

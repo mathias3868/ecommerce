@@ -18,3 +18,9 @@
   }
   // border: 1px solid red;
 }
+
+@media (max-width: 320px) {
+  .footerNav {
+    min-width: 135px;
+  }
+}

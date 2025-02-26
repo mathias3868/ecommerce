@@ -21,8 +21,18 @@
 
   .sendIcon {
     position: absolute;
-    left: 15rem;
+    left: 15.5rem;
     // border: 1px solid red;
     margin-top: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  .footerSub {
+    min-width: 100%;
+    text-align: center;
+    input {
+      width: 100%;
+    }
   }
 }

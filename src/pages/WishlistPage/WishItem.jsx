@@ -5,7 +5,7 @@ import styles from "./wishItem.module.scss";
 import { useNavigate } from "react-router-dom";
 
 function WishItem({ favItem }) {
-  const { removeFromWishes, addToCart } = useItem();
+  const { removeFromWishes, getProduct, addToCart } = useItem();
   const { image, title, price, id } = favItem;
   const navigate = useNavigate();
 
@@ -19,6 +19,7 @@ function WishItem({ favItem }) {
   };
 
   const handleAdd = () => {
+    getProduct(id);
     addToCart(id);
     navigate("/cart");
   };

@@ -17,6 +17,7 @@
     outline: none;
     border: none;
     cursor: pointer;
+    @include border-radius(3px);
   }
   .count {
     line-height: 2rem;

@@ -1,11 +1,101 @@
 @import "../../scss/mixing";
 @import "../../scss/variables";
 
-.modal {
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  left: 0;
-  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: open 0.2s forwards;
+
+  @keyframes open {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .modalContent {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    width: 600px;
+    max-width: 90%;
+    transform: scale(0.7);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: open-modal 0.2s forwards;
+    transform: all 0.2s;
+
+    @keyframes open-modal {
+      to {
+        transform: scale(1);
+      }
+    }
+
+    .modalHead {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h5 {
+        @include font-style($size-large - 2px, $weight-large);
+      }
+      .closeButton {
+        background: none;
+        border: none;
+        @include font-style($size-largest + 10px, $weight-large);
+        cursor: pointer;
+      }
+    }
+
+    p {
+      @include font-style($size-medium, $weight-medium);
+      line-height: 2rem;
+    }
+
+    .decisionBtns {
+      @include flexing();
+      align-items: center;
+      justify-content: flex-end;
+      @include column-gap(20px);
+      margin-top: 20px;
+      button {
+        border: 3px solid $search-bnt-bg;
+        padding: 12px 25px;
+        outline: none;
+        text-align: center;
+        @include border-radius(3px);
+        @include font-style($size-medium, $weight-medium);
+        cursor: pointer;
+      }
+
+      .okBtn {
+        background: $search-bnt-bg;
+        color: $text-color-white;
+      }
+
+      .cancelBtn {
+        background: $bg-color-white;
+        color: $text-color-black;
+      }
+    }
+  }
 }
+
+// .modal {
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.6);
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+// }

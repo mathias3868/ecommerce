@@ -5,7 +5,7 @@
   @include flexing();
   align-items: baseline;
   justify-content: space-between;
-  max-width: 900px;
+  max-width: 880px;
   margin: 0 auto;
   border: 1px solid $bg-border-color;
   padding: 20px;
@@ -38,10 +38,17 @@
     max-width: 250px;
     .remove {
       color: $search-bnt-bg;
-      @include font-style($size-medium, $weight-medium);
+      @include font-style($size-medium - 2px, $weight-medium);
       border: none;
       outline: none;
       cursor: pointer;
+      padding: 5px;
+      @include border-radius(3px);
+      background: $bg-color-white;
+
+      &:hover {
+        background: #fcdbb9;
+      }
     }
 
     .buy {

@@ -11,7 +11,7 @@ function AllProductsCat() {
   return (
     <section className={styles.allProductContainer}>
       <div className={styles.allproductCol1}>
-        <CategoriesList />
+        {<CategoriesList />}
         <NewProducts />
       </div>
       <TopMessage className="topmessagebody">

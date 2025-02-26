@@ -53,6 +53,26 @@ body {
   }
 }
 
+// =========Modal customization=============
+
+.modal-custome {
+  background: $bg-color-semi-white;
+  border-radius: 20px;
+  border: 5px solid red;
+}
+
+@media (max-width: 320px) {
+  .topmessageNav {
+    @include font-style($size-small, $weight-small);
+  }
+  .topmessagebody {
+    @include font-style($size-small, $weight-small);
+    .time {
+      min-width: 120px;
+    }
+  }
+}
+
 // const index = cartedProducts.findIndex((item) => item === action.payload);
 //       if (index !== -1) {
 //         cartedProducts.splice(index, 1);

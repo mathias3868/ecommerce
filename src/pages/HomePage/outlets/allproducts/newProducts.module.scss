@@ -9,3 +9,15 @@
     }
   }
 }
+
+@media (max-width: 320px) {
+  .carouselContainerMain {
+    padding: 10px 0 0 5px;
+    .carouselContainer {
+      width: 260px;
+      img {
+        width: 260px;
+      }
+    }
+  }
+}
