@@ -9,4 +9,24 @@
     @include font-style($size-largest + 10px, $weight-largest);
     color: $text-color-black;
   }
+
+  @media (max-width: 320px) {
+    h1 {
+      @include font-style($size-largest - 2px, $weight-largest);
+    }
+
+    img {
+      width: 30px;
+    }
+  }
+
+  @media (max-width: 470px) {
+    h1 {
+      @include font-style($size-largest - 2px, $weight-largest);
+    }
+
+    img {
+      width: 30px;
+    }
+  }
 }

@@ -19,6 +19,14 @@ body {
   text-align: center;
   color: $text-color-white;
   padding: 10px 0;
+
+  @media (max-width: 320px) {
+    @include font-style($size-small, $weight-small);
+  }
+
+  @media (max-width: 470px) {
+    @include font-style($size-small, $weight-small);
+  }
 }
 
 .topmessagebody {
@@ -34,6 +42,20 @@ body {
     @include flexing();
     justify-content: space-between;
     // border: 1px solid yellow;
+  }
+
+  @media (max-width: 320px) {
+    @include font-style($size-small, $weight-small);
+    .time {
+      min-width: 120px;
+    }
+  }
+
+  @media (max-width: 470px) {
+    @include font-style($size-small, $weight-small);
+    .time {
+      min-width: 120px;
+    }
   }
 }
 
@@ -59,18 +81,6 @@ body {
   background: $bg-color-semi-white;
   border-radius: 20px;
   border: 5px solid red;
-}
-
-@media (max-width: 320px) {
-  .topmessageNav {
-    @include font-style($size-small, $weight-small);
-  }
-  .topmessagebody {
-    @include font-style($size-small, $weight-small);
-    .time {
-      min-width: 120px;
-    }
-  }
 }
 
 // const index = cartedProducts.findIndex((item) => item === action.payload);

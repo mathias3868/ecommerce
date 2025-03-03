@@ -8,15 +8,22 @@
       width: 900px;
     }
   }
-}
-
-@media (max-width: 320px) {
-  .carouselContainerMain {
+  @media (max-width: 320px) {
     padding: 10px 0 0 5px;
     .carouselContainer {
       width: 260px;
       img {
         width: 260px;
+      }
+    }
+  }
+
+  @media (max-width: 470px) {
+    padding: 10px 0 0 5px;
+    .carouselContainer {
+      width: 450px;
+      img {
+        width: 450px;
       }
     }
   }

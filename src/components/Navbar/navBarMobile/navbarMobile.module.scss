@@ -1,0 +1,13 @@
+@import "../../../scss/mixing";
+@import "../../../scss/variables";
+
+.navItemSmall {
+  @include flexing();
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: $bg-color-white;
+}
+
+.none {
+  display: none;
+}

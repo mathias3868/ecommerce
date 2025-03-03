@@ -28,4 +28,30 @@
     @include border-radius(50%);
     color: $text-color-white;
   }
+
+  @media (max-width: 320px) {
+    margin-left: 50px;
+    .cartName {
+      display: none;
+    }
+    .cartTotal {
+      width: 15px;
+      height: 15px;
+      right: 4.3rem;
+      top: 17px;
+    }
+  }
+
+  @media (max-width: 470px) {
+    margin-left: 195px;
+    .cartName {
+      display: none;
+    }
+    .cartTotal {
+      width: 15px;
+      height: 15px;
+      right: 4.4rem;
+      top: 3.4rem;
+    }
+  }
 }

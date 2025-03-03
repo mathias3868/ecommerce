@@ -42,16 +42,40 @@
     color: $text-color-reserved;
     transform: scale(1.005);
   }
-}
-
-@media (max-width: 320px) {
-  .productBox {
+  @media (max-width: 320px) {
     min-width: 130px;
     border: 1px solid #feefef;
     // border-width: 10px;
 
     .productImg {
       width: 80px;
+    }
+
+    .productName {
+      @include font-style($size-small, $weight-small);
+      line-height: 1rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 85px;
+    }
+
+    .productPrice {
+      @include font-style($size-small, $weight-small);
+      line-height: 1rem;
+    }
+    &:hover {
+      transform: scale(1.001);
+    }
+  }
+
+  @media (max-width: 470px) {
+    min-width: 185px;
+    border: 1px solid #feefef;
+    // border-width: 10px;
+
+    .productImg {
+      width: 120px;
     }
 
     .productName {

@@ -25,14 +25,24 @@
     // border: 1px solid red;
     margin-top: 18px;
   }
-}
 
-@media (max-width: 320px) {
-  .footerSub {
+  @media (max-width: 320px) {
     min-width: 100%;
     text-align: center;
     input {
       width: 100%;
+    }
+  }
+
+  @media (max-width: 470px) {
+    min-width: 100%;
+    text-align: center;
+    input {
+      width: 100%;
+    }
+
+    .sendIcon {
+      left: 25rem;
     }
   }
 }

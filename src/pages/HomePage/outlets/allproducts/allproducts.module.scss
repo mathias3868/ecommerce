@@ -11,10 +11,15 @@
     align-items: normal;
     margin-bottom: 80px;
   }
-}
 
-@media (max-width: 320px) {
-  .allProductContainer {
+  @media (max-width: 320px) {
+    padding: 0 20px;
+    .allproductCol1 {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 470px) {
     padding: 0 20px;
     .allproductCol1 {
       margin-bottom: 20px;

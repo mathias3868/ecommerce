@@ -1,0 +1,88 @@
+@import "../../../scss/mixing";
+@import "../../../scss/variables";
+
+.navbar {
+  // background: #222;
+  // padding: 1rem;
+  display: block;
+  // align-items: center;
+  z-index: 100 !important;
+
+  .menuBtn {
+    @include font-style($size-largest, $weight-large);
+    color: $text-color-black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .navListContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+    animation: open 0.2s forwards;
+
+    @keyframes open {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .navlinks {
+      list-style: none;
+      padding: 0 0 0 20px;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      height: 100vh;
+      left: 0;
+      width: 70%;
+      background: $bg-color-white;
+      display: none;
+      flex-direction: column;
+      // text-align: center;
+      z-index: 100 !important;
+
+      .cancelBtn {
+        @include font-style($size-largest + 10px, $weight-large);
+        color: $text-color-black;
+        position: absolute;
+        right: 10px;
+        top: 6px;
+        display: block;
+      }
+
+      li {
+        padding: 0 !important;
+        line-height: 1rem !important;
+
+        a {
+          color: $text-color-reserved;
+          text-decoration: none;
+
+          display: block;
+          &:hover {
+            background: $text-color-black;
+          }
+        }
+      }
+      &.open {
+        display: flex;
+      }
+    }
+    &.open {
+      display: flex;
+    }
+  }
+}

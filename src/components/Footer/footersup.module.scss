@@ -4,4 +4,9 @@
 .footerSup {
   min-width: 150px;
   // border: 1px solid red;
+
+  @media (max-width: 470px) {
+    min-width: 400px;
+    text-align: center;
+  }
 }

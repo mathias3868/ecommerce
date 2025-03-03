@@ -45,17 +45,6 @@ function CartItems({ cartproduct }) {
 
   return (
     <div>
-      {/* <Modal
-        title={modalTitle}
-        content={modalText}
-        open={open}
-        onOk={handleRemove}
-        onCancel={handleModalClose}
-        okText="Remove item"
-        cancelText="Save for later"
-        ClassName={styles.modalCustom}
-      /> */}
-
       <Modal
         isOpen={open}
         headTitle={modalTitle}

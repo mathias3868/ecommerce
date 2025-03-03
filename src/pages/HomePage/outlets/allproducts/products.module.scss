@@ -8,12 +8,16 @@
   justify-items: center;
   background: $bg-color-white;
   padding: 10px 20px;
-}
-
-@media (max-width: 320px) {
-  .productsBlock {
+  @media (max-width: 320px) {
     padding: 10px 5px;
     grid-template-columns: repeat(auto-fit, minmax(125px, auto));
+    // padding: 0;
+    gap: 10px 5px;
+  }
+
+  @media (max-width: 470px) {
+    padding: 10px 5px;
+    grid-template-columns: repeat(auto-fit, minmax(205px, auto));
     // padding: 0;
     gap: 10px 5px;
   }
