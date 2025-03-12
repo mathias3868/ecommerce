@@ -51,9 +51,9 @@ function Discription() {
   return (
     <div>
       <div className={styles.canScrollLink}>
-        <NavLink to={"/"}>Home >> </NavLink>
+        <NavLink to={"/"}>Home &gt;&gt; </NavLink>
         <NavLink to={`/all_products/${category}`} onClick={handleGetCategory}>
-          {category} >>{" "}
+          {category} &gt;&gt;
         </NavLink>
         <NavLink>{title}</NavLink>
       </div>

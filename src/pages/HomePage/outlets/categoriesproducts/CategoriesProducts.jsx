@@ -13,7 +13,7 @@ function CategoriesProducts() {
   if (isLoading) return <Loading />;
   return (
     <div className={styles.main}>
-      <NavLink to={"/"}>Home >> </NavLink>
+      <NavLink to={"/"}>Home &gt;&gt; </NavLink>
       <NavLink to={`/all_products/${category}`}>{category}</NavLink>
       <TopMessage className={styles.ActiveCategory}>{category}</TopMessage>
       <TopMessage className={styles.callOrder}>
