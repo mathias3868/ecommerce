@@ -9,9 +9,9 @@ import { NavLink, Link } from "react-router-dom";
 const items = [
   {
     label: (
-      <p to={""} className={styles.loginBtn}>
-        Sign In
-      </p>
+      <NavLink to={"/forms/login"} className={styles.loginBtn}>
+        <span>Sign in</span>
+      </NavLink>
     ),
     key: "0",
   },

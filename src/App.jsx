@@ -37,7 +37,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="cart" element={<Cart />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="form" element={<FormFrame />}>
+            <Route path="forms" element={<FormFrame />}>
               <Route index element={<Navigate replace to={"login"} />} />
               <Route path="login" element={<Login />} />
               <Route path="signup" element={<Signup />} />

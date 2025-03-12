@@ -33,7 +33,7 @@
   }
 }
 
-.loginBtn {
+.loginBtn span {
   padding: 11px 50px;
   @include font-style($size-medium, $weight-medium);
   color: $text-color-white;
