@@ -4,7 +4,6 @@ import CartItemsList from "./CartItemsList";
 import Footer from "../../components/Footer/Footer";
 import TopMessage from "../../components/TopMessage";
 import styles from "./cart.module.scss";
-import TotalInCart from "./totalInCart";
 
 function Cart() {
   return (
