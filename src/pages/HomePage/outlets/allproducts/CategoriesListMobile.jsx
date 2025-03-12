@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useItem } from "../../../../contexts/ItemContext";
 import Category from "./Category";
-import styles from "./category.module.scss";
+import styles from "./categorieslistmobile.module.scss";
 
-function CategoriesList() {
+function CategoriesListMobile() {
   const { categories, getCategoryProduct } = useItem();
 
-  const [isVisible, setIsVisible] = useState(window.innerWidth > 768);
+  const [isVisible, setIsVisible] = useState(window.innerWidth > 500);
   useEffect(function () {
     const handleResize = () => {
       setIsVisible(window.innerWidth > 500);
@@ -18,14 +18,12 @@ function CategoriesList() {
   }, []);
 
   return (
-    <nav className={!isVisible ? styles.none : styles.categoryNavBar}>
-      <ul className={styles.categoryNavList}>
-        {categories.map((category) => (
-          <Category category={category} key={category} />
-        ))}
-      </ul>
-    </nav>
+    <ul className={styles.categoriesMobile}>
+      {categories.map((category) => (
+        <Category category={category} key={category} />
+      ))}
+    </ul>
   );
 }
 
-export default CategoriesList;
+export default CategoriesListMobile;

@@ -4,10 +4,27 @@
 .footerLink {
   min-width: 150px;
   // border: 1px solid red;
-}
+  @media (max-width: 320.9px) {
+    min-width: 120px;
+  }
 
-@media (max-width: 320px) {
-  .footerLink {
-    min-width: 135px;
+  @media (min-width: 321px) and (max-width: 470.9px) {
+    min-width: 200px;
+  }
+
+  @media (min-width: 471px) and (max-width: 620.9px) {
+    min-width: 150px;
+  }
+
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    min-width: 150px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    min-width: 90px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1200.9px) {
+    min-width: 100px;
   }
 }

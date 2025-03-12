@@ -9,6 +9,28 @@
       color: $text-color-black;
     }
   }
+
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    .dropItem {
+      span {
+        @include font-style($size-medium - 2px, $weight-medium);
+      }
+      img {
+        width: 25px;
+      }
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200.9px) {
+    .dropItem {
+      span {
+        @include font-style($size-medium, $weight-medium);
+      }
+      img {
+        width: 25px;
+      }
+    }
+  }
 }
 
 .loginBtn {

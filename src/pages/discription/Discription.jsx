@@ -50,11 +50,13 @@ function Discription() {
 
   return (
     <div>
-      <NavLink to={"/"}>Home >> </NavLink>
-      <NavLink to={`/all_products/${category}`} onClick={handleGetCategory}>
-        {category} >>{" "}
-      </NavLink>
-      <NavLink>{title}</NavLink>
+      <div className={styles.canScrollLink}>
+        <NavLink to={"/"}>Home >> </NavLink>
+        <NavLink to={`/all_products/${category}`} onClick={handleGetCategory}>
+          {category} >>{" "}
+        </NavLink>
+        <NavLink>{title}</NavLink>
+      </div>
       <div className={styles.descriptionBox}>
         <div className={styles.descriptionImage}>
           <img src={image} alt={`${title} Photo`} />
@@ -75,18 +77,24 @@ function Discription() {
           <p className={styles.descriptionDetails}>{description}</p>
           <h3 className={styles.descriptionPrice}>${price}</h3>
           {/* <StarRate starRate={rate} color="#fcc419" defaultRate={rate} /> */}
-          {quantityInCart < 1 ? (
-            <button className={styles.detailsAddBtn} onClick={handleAddtoCart}>
-              <img src={cartIcon} alt="Icon photo" />
-              <span>Add to cart</span>
-            </button>
-          ) : (
-            <div className={styles.flexBtn}>
-              <AddRemoveBtn quantityInCart={quantityInCart} />
-              <p className={styles.count}>( {quantityInCart} item(s) added )</p>
-              {/* <h2>{cartedProducts.length}</h2> */}
-            </div>
-          )}
+          <div className={styles.btnColumn}>
+            {quantityInCart < 1 ? (
+              <button
+                className={styles.detailsAddBtn}
+                onClick={handleAddtoCart}>
+                <img src={cartIcon} alt="Icon photo" />
+                <span>Add to cart</span>
+              </button>
+            ) : (
+              <div className={styles.flexBtn}>
+                <AddRemoveBtn quantityInCart={quantityInCart} />
+                <p className={styles.count}>
+                  ( {quantityInCart} item(s) added )
+                </p>
+                {/* <h2>{cartedProducts.length}</h2> */}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

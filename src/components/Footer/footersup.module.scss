@@ -4,9 +4,31 @@
 .footerSup {
   min-width: 150px;
   // border: 1px solid red;
+  @media (max-width: 320.9px) {
+    min-width: 250px;
+    text-align: center;
+  }
 
-  @media (max-width: 470px) {
+  @media (min-width: 321px) and (max-width: 470.9px) {
     min-width: 400px;
     text-align: center;
+  }
+
+  @media (min-width: 471px) and (max-width: 620.9px) {
+    min-width: 500px;
+    text-align: center;
+  }
+
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    min-width: 320px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    max-width: 300px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1200.9px) {
+    max-width: 300px;
   }
 }

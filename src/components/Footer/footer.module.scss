@@ -52,7 +52,7 @@
     margin: 0 20px;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 320.9px) {
     margin-top: 10px;
     .footerMainContainer {
       flex-wrap: wrap;
@@ -60,7 +60,7 @@
       @include column-gap(10px);
       overflow: hidden;
       padding: 10px 30px;
-      justify-content: center;
+      // justify-content: center;
       // text-align: center;
 
       h2 {
@@ -98,7 +98,7 @@
     }
   }
 
-  @media (max-width: 470px) {
+  @media (min-width: 321px) and (max-width: 470.9px) {
     margin-top: 10px;
     .footerMainContainer {
       flex-wrap: wrap;
@@ -106,7 +106,7 @@
       @include column-gap(10px);
       overflow: hidden;
       padding: 10px 20px;
-      justify-content: center;
+      // justify-content: center;
       // text-align: center;
 
       h2 {
@@ -143,6 +143,184 @@
       padding: 15px 0;
     }
   }
+
+  @media (min-width: 471px) and (max-width: 620.9px) {
+    margin-top: 10px;
+    .footerMainContainer {
+      flex-wrap: wrap;
+      row-gap: 10px;
+      @include column-gap(10px);
+      overflow: hidden;
+      padding: 10px 20px;
+      // justify-content: center;
+      // text-align: center;
+
+      h2 {
+        @include font-style($size-largest - 2px, $weight-largest - 100);
+        line-height: 2rem;
+      }
+
+      h4 {
+        @include font-style($size-large - 4px, $weight-large - 100);
+        line-height: 2.3rem;
+      }
+
+      p {
+        @include font-style($size-medium - 2px, $weight-medium);
+        line-height: 1.3rem;
+      }
+
+      a {
+        @include font-style($size-medium - 2px, $weight-medium);
+        line-height: 1.4rem;
+      }
+
+      small {
+        @include font-style($size-small, $weight-small);
+        line-height: 1rem;
+      }
+      hr {
+        margin: 0;
+      }
+    }
+    .copywriteMessage {
+      @include font-style($size-small + 2px, $weight-small);
+      margin: 0 5px;
+      padding: 15px 0;
+    }
+  }
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    margin-top: 10px;
+
+    .footerMainContainer {
+      flex-wrap: wrap;
+      row-gap: 10px;
+      @include column-gap(10px);
+      overflow: hidden;
+      padding: 10px 30px;
+      // justify-content: center;
+      // text-align: center;
+
+      h2 {
+        @include font-style($size-largest - 2px, $weight-largest - 100);
+        line-height: 2rem;
+      }
+
+      h4 {
+        @include font-style($size-large - 4px, $weight-large - 100);
+        line-height: 2.3rem;
+      }
+
+      p {
+        @include font-style($size-medium - 2px, $weight-medium);
+        line-height: 1.3rem;
+      }
+
+      a {
+        @include font-style($size-medium - 2px, $weight-medium);
+        line-height: 1.4rem;
+      }
+
+      small {
+        @include font-style($size-small, $weight-small);
+        line-height: 1rem;
+      }
+      hr {
+        margin: 0;
+      }
+    }
+    .copywriteMessage {
+      @include font-style($size-small + 2px, $weight-small);
+      margin: 0 5px;
+      padding: 15px 0;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    margin-top: 30px;
+    .footerMainContainer {
+      padding: 20px 30px;
+      @include column-gap(10px);
+
+      h2 {
+        @include font-style($size-largest - 2px, $weight-largest - 100);
+        line-height: 2rem;
+      }
+
+      h4 {
+        @include font-style($size-large - 4px, $weight-large - 100);
+        line-height: 2.3rem;
+      }
+
+      p {
+        @include font-style($size-medium - 4px, $weight-medium);
+        line-height: 1.3rem;
+      }
+
+      a {
+        @include font-style($size-medium - 2px, $weight-medium);
+        line-height: 1.4rem;
+      }
+
+      small {
+        @include font-style($size-small, $weight-small);
+        line-height: 1rem;
+      }
+      hr {
+        margin: 0;
+      }
+    }
+
+    .copywriteMessage {
+      @include font-style($size-small + 2px, $weight-small);
+      margin: 0 5px;
+      padding: 15px 0;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200.9px) {
+    margin-top: 30px;
+    .footerMainContainer {
+      padding: 20px 50px;
+      @include column-gap(15px);
+
+      h2 {
+        @include font-style($size-largest - 2px, $weight-largest - 100);
+        line-height: 2rem;
+      }
+
+      h4 {
+        @include font-style($size-large - 2px, $weight-large - 100);
+        line-height: 2.3rem;
+      }
+
+      p {
+        @include font-style($size-medium - 2px, $weight-medium);
+        line-height: 1.3rem;
+      }
+
+      a {
+        @include font-style($size-medium - 2px, $weight-medium);
+        line-height: 1.4rem;
+      }
+
+      small {
+        @include font-style($size-small, $weight-small);
+        line-height: 1rem;
+      }
+      hr {
+        margin: 0;
+      }
+    }
+    .copywriteMessage {
+      @include font-style($size-small + 2px, $weight-small);
+      margin: 0 5px;
+      padding: 15px 0;
+    }
+  }
+
+  // @media (min-width: 1201) and (max-width: 1449.9) {
+  // }
 }
 
 //=========== MEDIA QUERY ==============

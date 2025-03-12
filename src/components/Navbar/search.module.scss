@@ -17,12 +17,12 @@
   }
   .iconsearch {
     position: absolute;
-    left: 25rem;
+    left: 21.8rem;
     top: 30px;
   }
 
   .searchButton {
-    padding: 11px 20px;
+    padding: 9px 20px;
     border: none;
     @include border-radius(5px);
     background: $search-bnt-bg;
@@ -32,6 +32,52 @@
     @include font-style($size-medium - 2px, $weight-medium);
     &:hover {
       background: $search-bnt-bg-hover;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    input {
+      width: 300px;
+      height: 35px;
+      @include font-style($size-medium, $weight-medium);
+      @include border-radius(3px);
+      padding-left: 25px;
+      @include font-style($size-small, $weight-medium);
+      &::placeholder {
+        @include font-style($size-small + 2px, $weight-medium - 100);
+      }
+    }
+    .iconsearch {
+      left: 14.8rem;
+      width: 19px;
+    }
+    .searchButton {
+      padding: 8px 10px;
+      @include font-style($size-small, $weight-large);
+      @include border-radius(3px);
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200.9px) {
+    input {
+      width: 350px;
+      height: 35px;
+      @include font-style($size-medium, $weight-medium);
+      @include border-radius(3px);
+      padding-left: 25px;
+      @include font-style($size-small, $weight-medium);
+      &::placeholder {
+        @include font-style($size-small + 2px, $weight-medium - 100);
+      }
+    }
+    .iconsearch {
+      left: 18.7rem;
+      width: 19px;
+    }
+    .searchButton {
+      padding: 8px 10px;
+      @include font-style($size-small, $weight-large);
+      @include border-radius(3px);
     }
   }
 }

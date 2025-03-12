@@ -7,7 +7,7 @@
   box-shadow: 0 0 2px $bg-color-semi-white;
   height: fit-content;
   padding: 10px;
-  @include border-radius(5px 5px 0 0);
+  @include border-radius(3px 3px 0 0);
 
   .totalHead {
     @include font-style($size-medium, $weight-large - 100);
@@ -55,6 +55,57 @@
     margin-top: 20px;
     cursor: pointer;
   }
+
+  @media (max-width: 320.9px) {
+    min-width: 280px;
+    padding: 5px;
+
+    .checkoutBtn {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 321px) and (max-width: 470.9px) {
+    min-width: 280px;
+    padding: 5px;
+
+    .checkoutBtn {
+      width: 100%;
+    }
+  }
+  @media (min-width: 471px) and (max-width: 620.9px) {
+    min-width: 580px;
+    padding: 5px;
+
+    .checkoutBtn {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    min-width: 280px;
+    padding: 5px 10px;
+
+    .checkoutBtn {
+      width: 100%;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    min-width: 250px;
+    padding: 5px 10px;
+
+    .checkoutBtn {
+      width: 100%;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1200.9px) {
+    min-width: 250px;
+    padding: 5px 10px;
+
+    .checkoutBtn {
+      width: 100%;
+    }
+  }
 }
 
 .returningDetailsContainer {
@@ -79,5 +130,25 @@
     @include font-style($size-medium - 2px, $weight-medium - 100);
     color: rgb(124, 124, 240);
     line-height: normal;
+  }
+
+  @media (max-width: 320.9px) {
+    min-width: 280px;
+  }
+  @media (min-width: 321px) and (max-width: 470.9px) {
+    min-width: 430px;
+  }
+  @media (min-width: 471px) and (max-width: 620.9px) {
+    min-width: 580px;
+  }
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    min-width: 630px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    min-width: 220px;
+  }
+  @media (min-width: 991px) and (max-width: 1200.9px) {
+    min-width: 220px;
   }
 }

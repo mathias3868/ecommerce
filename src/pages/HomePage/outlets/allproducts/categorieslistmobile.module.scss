@@ -1,0 +1,14 @@
+@import "../../../../scss/mixing";
+@import "../../../../scss/variables";
+
+.categoriesMobile {
+  list-style-type: none;
+  li {
+    line-height: 1rem;
+    @include font-style($size-medium - 2px, $weight-medium);
+
+    a {
+      color: blue;
+    }
+  }
+}

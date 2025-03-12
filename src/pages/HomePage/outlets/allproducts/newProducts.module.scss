@@ -2,13 +2,14 @@
   padding: 40px 0 0 50px;
 
   .carouselContainer {
-    width: 900px;
+    width: 800px;
 
     img {
-      width: 900px;
+      width: 800px;
     }
   }
-  @media (max-width: 320px) {
+
+  @media (max-width: 320.9px) {
     padding: 10px 0 0 5px;
     .carouselContainer {
       width: 260px;
@@ -18,12 +19,52 @@
     }
   }
 
-  @media (max-width: 470px) {
+  @media (min-width: 321px) and (max-width: 470.9px) {
     padding: 10px 0 0 5px;
+
     .carouselContainer {
-      width: 450px;
+      width: 430px;
       img {
-        width: 450px;
+        width: 430px;
+      }
+    }
+  }
+
+  @media (min-width: 471px) and (max-width: 620.9px) {
+    padding: 10px 0 0 5px;
+
+    .carouselContainer {
+      width: 570px;
+      img {
+        width: 570px;
+      }
+    }
+  }
+
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    padding: 10px 0 0 5px;
+
+    .carouselContainer {
+      width: 700px;
+      img {
+        width: 700px;
+      }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    .carouselContainer {
+      width: 600px;
+      img {
+        width: 600px;
+      }
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200.9px) {
+    .carouselContainer {
+      width: 800px;
+      img {
+        width: 800px;
       }
     }
   }

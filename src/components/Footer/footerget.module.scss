@@ -29,10 +29,7 @@
       object-fit: cover;
     }
   }
-}
-
-@media (max-width: 320px) {
-  .footerGet {
+  @media (max-width: 320.9px) {
     width: 100%;
     justify-content: center;
     .getFlex1 {
@@ -48,6 +45,114 @@
       max-width: 100%;
       justify-content: center;
       @include column-gap(30px);
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  @media (min-width: 321px) and (max-width: 470.9px) {
+    width: 100%;
+    justify-content: center;
+    .getFlex1 {
+      .QrCode {
+        width: 90px;
+      }
+      .appStore {
+        width: 127px;
+      }
+    }
+
+    .getFlex2 {
+      max-width: 100%;
+      justify-content: center;
+      @include column-gap(30px);
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  @media (min-width: 471px) and (max-width: 620.9px) {
+    width: 100%;
+    justify-content: center;
+    .getFlex1 {
+      .QrCode {
+        width: 110px;
+      }
+      .appStore {
+        width: 147px;
+      }
+    }
+
+    .getFlex2 {
+      max-width: 100%;
+      justify-content: center;
+      @include column-gap(30px);
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    max-width: 350px;
+    justify-content: center;
+    .getFlex1 {
+      .QrCode {
+        width: 110px;
+      }
+      .appStore {
+        width: 147px;
+      }
+    }
+
+    .getFlex2 {
+      max-width: 100%;
+      justify-content: center;
+      @include column-gap(30px);
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    max-width: 190px;
+
+    .getFlex1 {
+      .QrCode {
+        width: 75px;
+      }
+      .appStore {
+        width: 112px;
+      }
+    }
+    .getFlex2 {
+      max-width: 180px;
+      justify-content: center;
+      @include column-gap(20px);
+      img {
+        width: 20px;
+      }
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200.9px) {
+    max-width: 270px;
+
+    .getFlex1 {
+      .QrCode {
+        width: 110px;
+      }
+      .appStore {
+        width: 157px;
+      }
+    }
+    .getFlex2 {
+      max-width: 250px;
+      justify-content: center;
+      @include column-gap(25px);
       img {
         width: 30px;
       }

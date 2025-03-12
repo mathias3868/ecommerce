@@ -1,62 +1,255 @@
 @import "../../scss/mixing";
 @import "../../scss/variables";
 
-.listItem {
-  @include flexing();
-  max-width: 930px;
-  height: fit-content;
-  // border: 1px solid red;
-  justify-content: space-between;
-  padding: 10px 20px;
-  align-items: normal;
-  cursor: pointer;
-  border-bottom: 2px solid #b3b3b3;
+.wrapper {
+  //  max-width: ;
 
-  .listItemCol1 {
-    @include flexing();
-    align-items: center;
-    column-gap: 20px;
-    img {
-      width: 90px;
-    }
-    h4 {
-      @include font-style($size-medium + 2, $weight-medium);
-      line-height: 4rem;
-    }
-  }
-
-  .removeBtn {
-    @include flexing();
-    justify-content: normal;
+  .listItem {
+    // @include flexing();
+    max-width: 800px;
+    height: fit-content;
+    // border: 1px solid red;
+    padding: 10px 20px;
+    background: $bg-color-white;
     cursor: pointer;
-    // padding: 0 0;
-    width: 112px;
-    @include border-radius(5px);
-    margin-top: 10px;
-    // display: inline-block;
-    p {
-      @include font-style($size-medium - 2px, $weight-large - 100);
-      color: $search-bnt-bg-hover;
-    }
-    &:hover {
-      background: #fcdbb9;
-    }
-  }
+    border-bottom: 2px solid #b3b3b3;
 
-  .listItemCol2 {
-    .pricing {
-      @include font-style($size-medium, $weight-large);
-      color: #000;
-      line-height: 4rem;
-      margin-bottom: 40px;
-    }
-  }
-}
+    .listItemCol {
+      @include flexing();
+      align-items: normal;
+      justify-content: center;
+      @include column-gap(10px);
 
-:root {
-  .modalCustom {
-    .ant-modal-content {
-      width: 700px !important;
+      img {
+        width: 90px;
+      }
+      .listItemCol1 {
+        @include flexing();
+        justify-content: space-between;
+        align-items: center;
+        @include column-gap(200px);
+
+        h4 {
+          @include font-style($size-medium + 2, $weight-medium);
+          line-height: 4rem;
+        }
+        .pricing {
+          @include font-style($size-medium, $weight-large);
+          color: #000;
+          line-height: 4rem;
+          // margin-bottom: 40px;
+        }
+      }
+    }
+
+    .listItemCol2 {
+      @include flexing();
+      justify-content: space-between;
+      align-items: normal;
+      .removeBtn {
+        @include flexing();
+        justify-content: normal;
+        cursor: pointer;
+        // padding: 0 0;
+        width: 112px;
+        @include border-radius(5px);
+        margin-top: 10px;
+        // display: inline-block;
+        p {
+          @include font-style($size-medium - 2px, $weight-large - 100);
+          color: $search-bnt-bg-hover;
+        }
+        &:hover {
+          background: #fcdbb9;
+        }
+      }
+    }
+
+    @media (max-width: 320.9px) {
+      max-width: 280px;
+      padding: 5px;
+      flex-direction: column;
+
+      .listItemCol {
+        img {
+          width: 80px;
+        }
+        .listItemCol1 {
+          flex-wrap: wrap;
+          // flex-direction: column;
+          @include column-gap(0);
+
+          h4 {
+            @include font-style($size-medium - 2px, $weight-medium);
+            line-height: 1.5rem;
+          }
+          .pricing {
+            @include font-style($size-medium - 2px, $weight-large - 100);
+            line-height: 1.5rem;
+          }
+        }
+
+        .listItemCol2 {
+          .removeBtn {
+            img {
+              width: 50px;
+            }
+
+            p {
+              @include font-style($size-small, $weight-medium);
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 321px) and (max-width: 470.9px) {
+      max-width: 430px;
+      padding: 5px;
+      flex-direction: column;
+
+      .listItemCol {
+        img {
+          width: 90px;
+        }
+        .listItemCol1 {
+          flex-wrap: wrap;
+          // flex-direction: column;
+          @include column-gap(0);
+
+          h4 {
+            @include font-style($size-medium - 2px, $weight-medium);
+            line-height: 1.5rem;
+          }
+          .pricing {
+            @include font-style($size-medium - 2px, $weight-large - 100);
+            line-height: 1.5rem;
+          }
+        }
+
+        .listItemCol2 {
+          .removeBtn {
+            img {
+              width: 50px;
+            }
+
+            p {
+              @include font-style($size-small, $weight-medium);
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 471px) and (max-width: 620.9px) {
+      max-width: 580px;
+      padding: 5px;
+      flex-direction: column;
+
+      .listItemCol {
+        img {
+          width: 90px;
+        }
+        .listItemCol1 {
+          flex-wrap: wrap;
+          // flex-direction: column;
+          @include column-gap(70px);
+
+          h4 {
+            @include font-style($size-medium - 2px, $weight-medium);
+            line-height: 1.5rem;
+          }
+          .pricing {
+            @include font-style($size-medium - 2px, $weight-large - 100);
+            line-height: 1.5rem;
+          }
+        }
+
+        .listItemCol2 {
+          .removeBtn {
+            img {
+              width: 50px;
+            }
+
+            p {
+              @include font-style($size-small, $weight-medium);
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 621px) and (max-width: 767.9px) {
+      max-width: 707px;
+      padding: 5px;
+      flex-direction: column;
+
+      .listItemCol {
+        img {
+          width: 90px;
+        }
+        .listItemCol1 {
+          flex-wrap: wrap;
+          // flex-direction: column;
+          @include column-gap(230px);
+
+          h4 {
+            @include font-style($size-medium - 2px, $weight-medium);
+            line-height: 1.5rem;
+          }
+          .pricing {
+            @include font-style($size-medium - 2px, $weight-large - 100);
+            line-height: 1.5rem;
+          }
+        }
+
+        .listItemCol2 {
+          .removeBtn {
+            img {
+              width: 50px;
+            }
+
+            p {
+              @include font-style($size-small, $weight-medium);
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991.9px) {
+      max-width: 600px;
+      padding: 10px;
+      .listItemCol {
+        img {
+          width: 90px;
+        }
+
+        .listItemCol1 {
+          @include column-gap(50px);
+          h4 {
+            @include font-style($size-medium, $weight-medium);
+            line-height: 1.5rem;
+          }
+        }
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1200.9px) {
+      max-width: 650px;
+      padding: 10px;
+      .listItemCol {
+        img {
+          width: 90px;
+        }
+
+        .listItemCol1 {
+          @include column-gap(70px);
+          h4 {
+            @include font-style($size-medium, $weight-medium);
+            line-height: 1.5rem;
+          }
+        }
+      }
     }
   }
 }

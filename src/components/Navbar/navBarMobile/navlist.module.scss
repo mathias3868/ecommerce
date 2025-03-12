@@ -64,17 +64,14 @@
       }
 
       li {
-        padding: 0 !important;
-        line-height: 1rem !important;
+        display: flex;
+        flex-direction: column;
 
+        line-height: 2rem;
         a {
           color: $text-color-reserved;
           text-decoration: none;
-
-          display: block;
-          &:hover {
-            background: $text-color-black;
-          }
+          padding: 0;
         }
       }
       &.open {

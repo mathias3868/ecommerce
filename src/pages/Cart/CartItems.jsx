@@ -44,7 +44,7 @@ function CartItems({ cartproduct }) {
   }
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <Modal
         isOpen={open}
         headTitle={modalTitle}
@@ -57,18 +57,18 @@ function CartItems({ cartproduct }) {
       />
 
       <li className={styles.listItem} onClick={handleGettingProd}>
-        <div>
+        <div className={styles.listItemCol}>
+          <img src={image} alt={`${title} Photo`} />
           <div className={styles.listItemCol1}>
-            <img src={image} alt={`${title} Photo`} />
             <h4>{title}</h4>
+            <p className={styles.pricing}>${price}</p>
           </div>
+        </div>
+        <div className={styles.listItemCol2}>
           <div className={styles.removeBtn} onClick={handleModalOpen}>
             <TrashBinSvg />
             <p> Remove</p>
           </div>
-        </div>
-        <div className={styles.listItemCol2}>
-          <p className={styles.pricing}>${price}</p>
           <AddRemoveBtn quantityInCart={quantityInCart} />
         </div>
       </li>

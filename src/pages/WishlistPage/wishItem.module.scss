@@ -10,6 +10,7 @@
   border: 1px solid $bg-border-color;
   padding: 20px;
   margin-top: 20px;
+  background: $bg-color-white;
   .itemListCol1 {
     @include flexing();
     @include column-gap(20px);
@@ -60,6 +61,172 @@
       outline: none;
       @include border-radius(5px);
       cursor: pointer;
+    }
+  }
+
+  @media (max-width: 320.9px) {
+    flex-wrap: wrap;
+    max-width: 280px;
+    padding: 5px;
+    margin-top: 10px;
+
+    .itemListCol1 {
+      @include column-gap(10px);
+      img {
+        width: 80px;
+      }
+      .naming {
+        @include font-style($size-medium - 2px, $weight-medium);
+        line-height: 1.2rem;
+      }
+      .pricing {
+        @include font-style($size-medium - 2px, $weight-large);
+      }
+    }
+
+    .itemListCol2 {
+      // justify-content: space-between;
+      @include column-gap(90px);
+      max-width: 280px;
+    }
+  }
+
+  @media (min-width: 321px) and (max-width: 470.9px) {
+    flex-wrap: wrap;
+    max-width: 430px;
+    padding: 5px;
+    margin-top: 10px;
+
+    .itemListCol1 {
+      @include column-gap(10px);
+      img {
+        width: 80px;
+      }
+      .naming {
+        @include font-style($size-medium - 2px, $weight-medium);
+        line-height: 1.2rem;
+      }
+      .pricing {
+        @include font-style($size-medium - 2px, $weight-large);
+      }
+    }
+
+    .itemListCol2 {
+      // justify-content: space-between;
+      @include column-gap(240px);
+      max-width: 430px;
+    }
+  }
+
+  @media (min-width: 471px) and (max-width: 620.9px) {
+    flex-wrap: wrap;
+    max-width: 580px;
+    padding: 5px;
+    margin-top: 10px;
+
+    .itemListCol1 {
+      @include column-gap(10px);
+      align-items: center;
+      img {
+        width: 80px;
+      }
+      .naming {
+        @include font-style($size-medium - 2px, $weight-medium);
+        line-height: 1.2rem;
+      }
+      .pricing {
+        @include font-style($size-medium - 2px, $weight-large);
+      }
+    }
+
+    .itemListCol2 {
+      // justify-content: space-between;
+      @include column-gap(390px);
+      max-width: 580px;
+    }
+  }
+
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    flex-wrap: wrap;
+    max-width: 630px;
+    padding: 5px;
+    margin-top: 10px;
+
+    .itemListCol1 {
+      @include column-gap(10px);
+      align-items: center;
+      img {
+        width: 80px;
+      }
+      .naming {
+        @include font-style($size-medium - 2px, $weight-medium);
+        line-height: 1.2rem;
+      }
+      .pricing {
+        @include font-style($size-medium - 2px, $weight-large);
+      }
+    }
+
+    .itemListCol2 {
+      // justify-content: space-between;
+      @include column-gap(10px);
+      max-width: 250px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    flex-wrap: wrap;
+    max-width: 760px;
+    padding: 5px;
+    margin-top: 10px;
+
+    .itemListCol1 {
+      @include column-gap(20px);
+      align-items: center;
+      img {
+        width: 90px;
+      }
+      .naming {
+        @include font-style($size-medium, $weight-medium);
+        line-height: 1.5rem;
+      }
+      .pricing {
+        @include font-style($size-medium - 2px, $weight-large);
+      }
+    }
+
+    .itemListCol2 {
+      // justify-content: space-between;
+      @include column-gap(10px);
+      // justify-content: flex-end;
+      max-width: 250px;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1200.9px) {
+    flex-wrap: wrap;
+    max-width: 880px;
+    padding: 5px;
+    margin-top: 10px;
+
+    .itemListCol1 {
+      @include column-gap(20px);
+      align-items: center;
+      img {
+        width: 100px;
+      }
+      .naming {
+        @include font-style($size-medium + 2px, $weight-medium);
+        line-height: 1.5rem;
+      }
+      .pricing {
+        @include font-style($size-medium, $weight-large);
+      }
+    }
+
+    .itemListCol2 {
+      // justify-content: space-between;
+      @include column-gap(10px);
+      // justify-content: flex-end;
+      max-width: 250px;
     }
   }
 }

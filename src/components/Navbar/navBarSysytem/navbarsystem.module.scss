@@ -3,13 +3,28 @@
 
 .appNavItem {
   @include flexing();
-  @include column-gap(50px);
+  @include column-gap(25px);
   border-bottom: 1px solid $bg-border-color;
-  padding: 15px 100px 25px 100px;
+  padding: 15px 200px 25px 200px;
   // position: sticky;
   // z-index: 10;
   // top: 0;
   background: $bg-color-white;
+
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    padding: 15px 50px 20px 50px;
+    @include column-gap(25px);
+  }
+
+  @media (min-width: 992px) and (max-width: 1200.9px) {
+    padding: 15px 50px 20px 50px;
+    @include column-gap(35px);
+  }
+
+  // @media (min-width: 1201) and (max-width: 1449.9) {
+  //   padding: 15px 200px 25px 200px;
+  //   @include column-gap(50px);
+  // }
 }
 
 .none {

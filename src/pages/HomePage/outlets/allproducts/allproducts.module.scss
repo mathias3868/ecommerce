@@ -7,22 +7,59 @@
   background: #f1f1f2;
   .allproductCol1 {
     @include flexing();
-    @include column-gap(95px);
+    @include column-gap(45px);
     align-items: normal;
     margin-bottom: 80px;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 320.9px) {
     padding: 0 20px;
     .allproductCol1 {
       margin-bottom: 20px;
     }
   }
 
-  @media (max-width: 470px) {
+  @media (min-width: 321px) and (max-width: 470.9px) {
     padding: 0 20px;
     .allproductCol1 {
       margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: 471px) and (max-width: 620.9px) {
+    padding: 0 20px;
+    .allproductCol1 {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    padding: 0 30px;
+    .allproductCol1 {
+      margin-bottom: 20px;
+    }
+  }
+
+  // @media (min-width: 768px) and (max-width: 991.9px) {
+  //   padding: 0 60px;
+  //   .allproductCol1 {
+  //     margin-bottom: 20px;
+  //   }
+  // }
+
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    padding: 0 50px;
+    .allproductCol1 {
+      margin-bottom: 20px;
+      @include column-gap(20px);
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200.9px) {
+    padding: 0 50px;
+    .allproductCol1 {
+      margin-bottom: 30px;
+      @include column-gap(20px);
     }
   }
 }

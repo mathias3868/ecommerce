@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./navlist.module.scss"; // Import SCSS file
-import CategoriesList from "../../../pages/HomePage/outlets/allproducts/CategoriesList";
+import CategoriesListMobile from "../../../pages/HomePage/outlets/allproducts/CategoriesListMobile";
 
 function NavList() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,17 +18,23 @@ function NavList() {
             &times;
           </p>
           <li>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="">About</a>
           </li>
           <li>
-            <a href="#">Services</a>
+            <a href="#">Help</a>
+          </li>
+          <li>
+            <a href="#">Search Products</a>
+          </li>
+          <li>
+            <a href="/wishlist">WhishList</a>
           </li>
           <li>
             Categories
-            <CategoriesList />
+            <CategoriesListMobile />
           </li>
         </ul>
       </div>

@@ -20,12 +20,20 @@ body {
   color: $text-color-white;
   padding: 10px 0;
 
-  @media (max-width: 320px) {
+  @media (max-width: 320.9px) {
     @include font-style($size-small, $weight-small);
   }
 
-  @media (max-width: 470px) {
+  @media (min-width: 321px) and (max-width: 470.9px) {
     @include font-style($size-small, $weight-small);
+  }
+
+  @media (min-width: 471px) and (max-width: 620.9px) {
+    @include font-style($size-medium - 4px, $weight-medium);
+  }
+
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    @include font-style($size-medium - 2px, $weight-medium);
   }
 }
 
@@ -44,15 +52,28 @@ body {
     // border: 1px solid yellow;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 320.9px) {
     @include font-style($size-small, $weight-small);
     .time {
       min-width: 120px;
     }
   }
 
-  @media (max-width: 470px) {
+  @media (min-width: 321px) and (max-width: 470.9px) {
     @include font-style($size-small, $weight-small);
+    .time {
+      min-width: 120px;
+    }
+  }
+  @media (min-width: 471px) and (max-width: 620.9px) {
+    @include font-style($size-medium - 4px, $weight-medium);
+    .time {
+      min-width: 120px;
+    }
+  }
+
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    @include font-style($size-medium - 2px, $weight-medium);
     .time {
       min-width: 120px;
     }

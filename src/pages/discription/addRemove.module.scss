@@ -18,11 +18,19 @@
     border: none;
     cursor: pointer;
     @include border-radius(3px);
+
+    &:disabled {
+      background-color: #a29f9f;
+      color: $text-color-white;
+    }
   }
   .count {
     line-height: 2rem;
     font-size: $size-medium + 2px;
     font-weight: 500;
     display: inline-block;
+  }
+
+  @media (max-width: 320.9px) {
   }
 }

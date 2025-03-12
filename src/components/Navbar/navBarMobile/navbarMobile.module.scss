@@ -6,8 +6,12 @@
   justify-content: space-between;
   padding: 10px 20px;
   background: $bg-color-white;
+
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    padding: 10px 30px;
+  }
 }
 
-.none {
-  display: none;
-}
+// .none {
+//   display: none;
+// }

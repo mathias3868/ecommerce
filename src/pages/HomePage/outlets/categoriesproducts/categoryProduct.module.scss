@@ -14,7 +14,7 @@
   // border: 5px solid $bg-border-color;
 
   .productImg {
-    width: 300px;
+    width: 250px;
     &:nth-child(5) {
       width: 70px;
     }
@@ -41,5 +41,115 @@
     box-shadow: 0 0 6px $bg-border-color;
     color: $text-color-reserved;
     transform: scale(1.005);
+  }
+
+  @media (max-width: 320.9px) {
+    min-width: 115px;
+    // border: 1px solid #000;
+    @include border-radius(3px);
+    padding: 5px;
+
+    .productImg {
+      width: 90px;
+    }
+
+    .productName {
+      max-width: 100px;
+      @include font-style($size-small + 2px, $weight-medium - 100);
+    }
+
+    .productPrice {
+      @include font-style($size-small + 2px, $weight-medium);
+    }
+  }
+
+  @media (min-width: 321px) and (max-width: 470.9px) {
+    min-width: 180px;
+    // border: 1px solid #000;
+    @include border-radius(3px);
+    padding: 5px;
+
+    .productImg {
+      width: 110px;
+    }
+
+    .productName {
+      max-width: 170px;
+      @include font-style($size-small + 2px, $weight-medium);
+    }
+
+    .productPrice {
+      @include font-style($size-small + 2px, $weight-medium);
+    }
+  }
+
+  @media (min-width: 471px) and (max-width: 620.9px) {
+    min-width: 260px;
+    // border: 1px solid #000;
+    @include border-radius(3px);
+    padding: 5px;
+
+    .productImg {
+      width: 160px;
+    }
+
+    .productName {
+      max-width: 230px;
+      @include font-style($size-small + 2px, $weight-medium);
+    }
+
+    .productPrice {
+      @include font-style($size-small + 2px, $weight-medium);
+    }
+  }
+
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    min-width: 215px;
+    // border: 1px solid #000;
+    @include border-radius(3px);
+    padding: 5px;
+
+    .productImg {
+      width: 160px;
+    }
+
+    .productName {
+      max-width: 200px;
+      @include font-style($size-small + 2px, $weight-medium);
+    }
+
+    .productPrice {
+      @include font-style($size-small + 2px, $weight-medium);
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    min-width: 275px;
+    // border: 1px solid #000;
+    @include border-radius(5px);
+    padding: 5px;
+    .productImg {
+      width: 160px;
+    }
+    .productName {
+      max-width: 155px;
+      @include font-style($size-small + 2px, $weight-medium);
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200.9px) {
+    min-width: 300px;
+    // border: 1px solid #000;
+    @include border-radius(5px);
+    // padding: 5px;
+
+    .productImg {
+      width: 150px;
+    }
+
+    .productName {
+      max-width: 155px;
+      @include font-style($size-small + 2px, $weight-medium);
+    }
   }
 }

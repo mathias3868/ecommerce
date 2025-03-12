@@ -4,7 +4,7 @@ import SearchNav from "../SearchNav";
 import Account from "../Account";
 import HelpNav from "../HelpNav";
 import CartNav from "../CartNav";
-import styles from "../appnavbar.module.scss";
+import styles from "./navbarsystem.module.scss";
 
 function NavBarSystem() {
   // const [isVisible, setIsVisible] = useState(window.innerWidth > 500);

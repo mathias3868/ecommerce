@@ -2,11 +2,23 @@
 @import "../../scss/variables";
 
 div {
-  a {
-    @include font-style($size-medium - 2px, $weight-medium);
-    color: $text-color-black;
-    text-decoration: none;
-    line-height: 3rem;
+  .canScrollLink {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px;
+    a {
+      @include font-style($size-medium - 2px, $weight-medium);
+      color: $text-color-black;
+      text-decoration: none;
+      line-height: 3rem;
+    }
+    @media (max-width: 320.9px) {
+      max-width: 280px;
+    }
+    @media (min-width: 321px) and (max-width: 470.9px) {
+      max-width: 430px;
+    }
   }
 
   .descriptionBox {
@@ -22,7 +34,7 @@ div {
     .descriptionImage {
       max-width: 400px;
       img {
-        width: 350px;
+        width: 300px;
       }
     }
 
@@ -108,6 +120,230 @@ div {
 
         .count {
           @include font-style($size-medium - 2px, $weight-medium);
+        }
+      }
+    }
+
+    @media (max-width: 320.9px) {
+      flex-direction: column;
+      row-gap: 10px;
+
+      .descriptionImage {
+        max-width: 260px;
+        img {
+          width: 100%;
+        }
+      }
+
+      .details {
+        max-width: 280px;
+        .detailsHead .tags {
+          .tag1 {
+            padding: 3px;
+            @include font-style($size-small, $weight-medium - 100);
+            @include border-radius(2px);
+          }
+        }
+
+        .descriptionName {
+          @include font-style($size-medium, $weight-large - 200);
+        }
+
+        .descriptionDetails {
+          @include font-style($size-medium - 2px, $weight-medium);
+        }
+
+        .descriptionPrice {
+          @include font-style($size-medium, $weight-medium);
+        }
+
+        .btnColumn {
+          position: sticky;
+          bottom: 0;
+          z-index: 1;
+        }
+
+        .detailsAddBtn {
+          width: 100%;
+        }
+      }
+    }
+
+    @media (min-width: 321px) and (max-width: 470.9px) {
+      flex-direction: column;
+      row-gap: 10px;
+
+      .descriptionImage {
+        max-width: 420px;
+        img {
+          width: 100%;
+        }
+      }
+
+      .details {
+        max-width: 430px;
+        .detailsHead .tags {
+          .tag1 {
+            padding: 3px;
+            @include font-style($size-small, $weight-medium - 100);
+            @include border-radius(2px);
+          }
+        }
+
+        .descriptionName {
+          @include font-style($size-medium, $weight-large - 200);
+        }
+
+        .descriptionDetails {
+          @include font-style($size-medium - 2px, $weight-medium);
+        }
+
+        .descriptionPrice {
+          @include font-style($size-medium, $weight-medium);
+        }
+
+        .btnColumn {
+          position: sticky;
+          bottom: 0;
+          z-index: 1;
+        }
+
+        .detailsAddBtn {
+          width: 100%;
+        }
+      }
+    }
+
+    @media (min-width: 471px) and (max-width: 620.9px) {
+      flex-direction: column;
+      row-gap: 10px;
+
+      .descriptionImage {
+        max-width: 580px;
+        img {
+          width: 500px;
+        }
+      }
+
+      .details {
+        max-width: 580px;
+        .detailsHead .tags {
+          .tag1 {
+            padding: 3px;
+            @include font-style($size-small, $weight-medium - 100);
+            @include border-radius(2px);
+          }
+        }
+
+        .descriptionName {
+          @include font-style($size-medium, $weight-large - 200);
+        }
+
+        .descriptionDetails {
+          @include font-style($size-medium - 2px, $weight-medium);
+        }
+
+        .descriptionPrice {
+          @include font-style($size-medium, $weight-medium);
+        }
+
+        .btnColumn {
+          position: sticky;
+          bottom: 0;
+          z-index: 1;
+        }
+
+        .detailsAddBtn {
+          width: 100%;
+        }
+      }
+    }
+
+    @media (min-width: 621px) and (max-width: 767.9px) {
+      flex-direction: column;
+      row-gap: 10px;
+      max-width: 450px;
+
+      .descriptionImage {
+        max-width: 350px;
+        img {
+          width: 300px;
+        }
+      }
+
+      .details {
+        max-width: 400px;
+        .detailsHead .tags {
+          .tag1 {
+            padding: 3px;
+            @include font-style($size-small, $weight-medium - 100);
+            @include border-radius(2px);
+          }
+        }
+
+        .descriptionName {
+          @include font-style($size-medium, $weight-large - 200);
+        }
+
+        .descriptionDetails {
+          @include font-style($size-medium - 2px, $weight-medium);
+        }
+
+        .descriptionPrice {
+          @include font-style($size-medium, $weight-medium);
+        }
+
+        .btnColumn {
+          position: sticky;
+          bottom: 0;
+          z-index: 1;
+        }
+
+        .detailsAddBtn {
+          width: 100%;
+        }
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      flex-basis: 500px;
+      .descriptionImage {
+        max-width: 400px;
+        img {
+          width: 280px;
+        }
+      }
+
+      .details {
+        max-width: 400px;
+        .detailsHead .tags {
+          .tag1 {
+            padding: 3px;
+            @include font-style($size-small, $weight-medium - 100);
+            @include border-radius(2px);
+          }
+        }
+
+        .descriptionName {
+          @include font-style($size-medium, $weight-large - 200);
+        }
+
+        .descriptionDetails {
+          @include font-style($size-medium - 2px, $weight-medium);
+        }
+
+        .descriptionPrice {
+          @include font-style($size-medium, $weight-medium);
+        }
+
+        .btnColumn {
+          position: sticky;
+          bottom: 0;
+          z-index: 1;
+        }
+
+        .detailsAddBtn {
+          width: 100%;
         }
       }
     }

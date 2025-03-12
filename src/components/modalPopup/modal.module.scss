@@ -24,9 +24,9 @@
   }
 
   .modalContent {
-    background: white;
+    background: $bg-color-white;
     padding: 10px 20px;
-    border-radius: 5px;
+    @include border-radius(5px);
     position: relative;
     width: 600px;
     max-width: 90%;
@@ -42,8 +42,9 @@
     }
 
     .modalHead {
-      display: flex;
-      align-items: center;
+      // display: flex;
+      // align-items: center;
+      @include flexing();
       justify-content: space-between;
 
       h5 {
@@ -86,6 +87,103 @@
       .cancelBtn {
         background: $bg-color-white;
         color: $text-color-black;
+      }
+    }
+
+    @media (max-width: 320.9px) {
+      width: 300px;
+      padding: 5px 10px;
+      .modalHead {
+        h5 {
+          @include font-style($size-medium, $weight-large - 2px);
+        }
+
+        .closeButton {
+          @include font-style($size-largest + 4px, $weight-large);
+        }
+      }
+      p {
+        @include font-style($size-medium - 2px, $weight-medium);
+        line-height: 1.2rem;
+      }
+      .decisionBtns {
+        @include column-gap(10px);
+        button {
+          padding: 8px 15px;
+          @include font-style($size-medium - 2px, $weight-medium);
+        }
+      }
+    }
+    @media (min-width: 321px) and (max-width: 470.9px) {
+      width: 450px;
+      padding: 5px 10px;
+      .modalHead {
+        h5 {
+          @include font-style($size-medium, $weight-large - 2px);
+        }
+
+        .closeButton {
+          @include font-style($size-largest + 4px, $weight-large);
+        }
+      }
+      p {
+        @include font-style($size-medium - 2px, $weight-medium);
+        line-height: 1.5rem;
+      }
+      .decisionBtns {
+        @include column-gap(10px);
+        button {
+          padding: 8px 15px;
+          @include font-style($size-medium - 2px, $weight-medium);
+        }
+      }
+    }
+    @media (min-width: 471px) and (max-width: 620.9px) {
+      width: 600px;
+      padding: 5px 10px;
+      .modalHead {
+        h5 {
+          @include font-style($size-medium, $weight-large - 2px);
+        }
+
+        .closeButton {
+          @include font-style($size-largest + 4px, $weight-large);
+        }
+      }
+      p {
+        @include font-style($size-medium - 2px, $weight-medium);
+        line-height: 1.5rem;
+      }
+      .decisionBtns {
+        @include column-gap(10px);
+        button {
+          padding: 8px 15px;
+          @include font-style($size-medium - 2px, $weight-medium);
+        }
+      }
+    }
+    @media (min-width: 621px) and (max-width: 767.9px) {
+      width: 745px;
+      padding: 5px 10px;
+      .modalHead {
+        h5 {
+          @include font-style($size-medium + 2px, $weight-large);
+        }
+
+        .closeButton {
+          @include font-style($size-largest + 4px, $weight-large);
+        }
+      }
+      p {
+        @include font-style($size-medium, $weight-medium);
+        line-height: 1.5rem;
+      }
+      .decisionBtns {
+        @include column-gap(10px);
+        button {
+          padding: 10px 20px;
+          @include font-style($size-medium, $weight-medium);
+        }
       }
     }
   }

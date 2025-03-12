@@ -19,6 +19,14 @@
       }
     }
   }
+
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    padding: 15px 20px;
+    .categoryNavItem {
+      padding: 5px;
+      @include font-style($size-medium - 2px, $weight-medium);
+    }
+  }
 }
 
 .none {

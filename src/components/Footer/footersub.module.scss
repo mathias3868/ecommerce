@@ -23,18 +23,22 @@
     position: absolute;
     left: 15.5rem;
     // border: 1px solid red;
+    width: 100px;
     margin-top: 18px;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 320.9px) {
     min-width: 100%;
     text-align: center;
     input {
       width: 100%;
     }
+    .sendIcon {
+      left: 13rem;
+    }
   }
 
-  @media (max-width: 470px) {
+  @media (min-width: 321px) and (max-width: 470.9px) {
     min-width: 100%;
     text-align: center;
     input {
@@ -42,7 +46,59 @@
     }
 
     .sendIcon {
-      left: 25rem;
+      left: 23rem;
+    }
+  }
+
+  @media (min-width: 471px) and (max-width: 620.9px) {
+    min-width: 100%;
+    text-align: center;
+    input {
+      width: 100%;
+    }
+
+    .sendIcon {
+      left: 31rem;
+    }
+  }
+
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    min-width: 340px;
+    text-align: center;
+    input {
+      width: 100%;
+    }
+
+    .sendIcon {
+      left: 19.5rem;
+      // bottom: ;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    min-width: 200px;
+    text-align: center;
+    input {
+      width: 100%;
+    }
+
+    .sendIcon {
+      left: 10.5rem;
+
+      // bottom: ;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200.9px) {
+    min-width: 250px;
+    text-align: center;
+    input {
+      width: 100%;
+    }
+
+    .sendIcon {
+      left: 14.5rem;
+      // bottom: ;
     }
   }
 }

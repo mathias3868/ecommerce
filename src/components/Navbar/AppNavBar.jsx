@@ -4,15 +4,16 @@ import NavbarMobile from "./navBarMobile/NavBarMobile";
 import styles from "./appnavbar.module.scss";
 
 function AppNavBar() {
-  const [isVisible, setIsVisible] = useState(window.innerWidth > 500);
+  const [isVisible, setIsVisible] = useState(window.innerWidth > 768);
   useEffect(function () {
     const handleResize = () => {
-      setIsVisible(window.innerWidth < 500);
+      setIsVisible(window.innerWidth <= 768);
     };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return (
     <div className={styles.navSection}>
       {isVisible ? <NavBarSystem /> : <NavbarMobile />}

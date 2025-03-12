@@ -42,7 +42,7 @@
     color: $text-color-reserved;
     transform: scale(1.005);
   }
-  @media (max-width: 320px) {
+  @media (max-width: 320.9px) {
     min-width: 130px;
     border: 1px solid #feefef;
     // border-width: 10px;
@@ -69,7 +69,7 @@
     }
   }
 
-  @media (max-width: 470px) {
+  @media (min-width: 321px) and (max-width: 470.9px) {
     min-width: 185px;
     border: 1px solid #feefef;
     // border-width: 10px;
@@ -84,7 +84,7 @@
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      max-width: 85px;
+      max-width: 150px;
     }
 
     .productPrice {
@@ -93,6 +93,106 @@
     }
     &:hover {
       transform: scale(1.001);
+    }
+  }
+
+  @media (min-width: 471px) and (max-width: 620.9px) {
+    min-width: 263px;
+    border: 1px solid #feefef;
+    padding: 5px 10px;
+    // border-width: 10px;
+
+    .productImg {
+      width: 130px;
+    }
+
+    .productName {
+      @include font-style($size-medium - 2px, $weight-medium - 100);
+      line-height: 1.3rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 200px;
+    }
+
+    .productPrice {
+      @include font-style($size-medium - 2px, $weight-medium - 100);
+      line-height: 1.3rem;
+    }
+    &:hover {
+      transform: scale(1.001);
+    }
+  }
+
+  @media (min-width: 621px) and (max-width: 767.9px) {
+    min-width: 200px;
+    border: 1px solid #feefef;
+    padding: 5px 10px;
+    // border-width: 10px;
+
+    .productImg {
+      width: 130px;
+    }
+
+    .productName {
+      @include font-style($size-medium - 2px, $weight-medium - 100);
+      line-height: 1.3rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 200px;
+    }
+
+    .productPrice {
+      @include font-style($size-medium - 2px, $weight-medium - 100);
+      line-height: 1.3rem;
+    }
+    &:hover {
+      transform: scale(1.001);
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991.9px) {
+    min-width: 280px;
+    // border: 1px solid #feefef;
+    padding: 5px 10px;
+    .productImg {
+      width: 130px;
+    }
+    .productName {
+      @include font-style($size-medium - 2px, $weight-medium - 100);
+      line-height: 1.3rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 200px;
+    }
+
+    .productPrice {
+      @include font-style($size-medium - 2px, $weight-medium - 100);
+      line-height: 1.3rem;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200.9px) {
+    min-width: 250px;
+    // border: 1px solid #feefef;
+    padding: 5px 10px;
+    .productImg {
+      width: 130px;
+    }
+    .productName {
+      @include font-style($size-medium, $weight-medium - 100);
+      line-height: 1.5rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 200px;
+    }
+
+    .productPrice {
+      @include font-style($size-medium, $weight-medium - 100);
+      line-height: 1.5rem;
     }
   }
 }
