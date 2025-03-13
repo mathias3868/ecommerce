@@ -10,7 +10,7 @@ function TotalInCart() {
     return acc + item.price * item.quantity;
   }, 0);
 
-  console.log(`total Price ${totalPrice}`);
+  // console.log(`total Price ${totalPrice}`);
 
   const total = Math.round(totalPrice);
 

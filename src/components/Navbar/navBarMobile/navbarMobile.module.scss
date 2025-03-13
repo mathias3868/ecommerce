@@ -1,5 +1,5 @@
-@import "../../../scss/mixing";
-@import "../../../scss/variables";
+@use "../../../scss/mixins";
+@use "../../../scss/variables";
 
 .navItemSmall {
   @include flexing();

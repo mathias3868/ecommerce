@@ -1,5 +1,5 @@
-@import "../../scss/mixing";
-@import "../../scss/variables";
+@use "../../scss/variables" as *;
+@use "../../scss/mixins" as *;
 
 .mainContainer {
   background: $bg-color-semi-white;
