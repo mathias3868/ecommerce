@@ -2,14 +2,12 @@ import React from "react";
 import { useItem } from "../../contexts/ItemContext";
 import CartItems from "./CartItems";
 import styles from "./cartItemList.module.scss";
+import TotalInCart from "./TotalInCart";
 import cartImage from "../../assets/sideImg/transparent-cart-scaled.jpg";
 import Message from "../../components/Message";
-import TotalInCart from "./totalInCart";
-// import Modal from "../../components/modalPopup/Modal";
 
 function CartItemsList() {
-  const { cartedProducts, totalPrice } = useItem();
-  console.log(cartedProducts.length);
+  const { cartedProducts } = useItem();
 
   if (cartedProducts.length === 0)
     return (
@@ -21,11 +19,8 @@ function CartItemsList() {
       />
     );
 
-  console.log(totalPrice);
-
   return (
     <section className={styles.cartDivision}>
-      {/* <Modal /> */}
       <ul className={styles.list}>
         <p className={styles.cart}>CART({cartedProducts.length})</p>
         {cartedProducts.map((cartproduct) => (
