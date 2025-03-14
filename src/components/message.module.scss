@@ -2,12 +2,15 @@
 @use "../scss/mixins" as *;
 
 section {
-  padding: 50px 125px;
+  // padding: 50px 125px;
 
   .meaasgeBody {
     @include flexing();
-    height: 70vh;
-    width: 900px;
+    height: 400px;
+    max-height: 80%;
+    width: 800px;
+    max-width: 90%;
+
     align-items: center;
     flex-direction: column;
     background: $bg-color-white;
@@ -15,8 +18,8 @@ section {
     @include border-radius(5px);
 
     .messageImage {
-      width: 200px;
-      margin-top: 80px;
+      width: 150px;
+      margin-top: 50px;
     }
 
     h4 {
@@ -40,12 +43,73 @@ section {
       outline: none;
       border: none;
       @include border-radius(5px);
-      margin: 20px 0 60px 0;
+      margin: 20px 0 40px 0;
       cursor: pointer;
       text-align: center;
 
       &:hover {
         background: $search-bnt-bg-hover;
+      }
+
+      @media (min-width: 471px) and (max-width: 620.9px) {
+        @include font-style($size-medium - 2px, $weight-medium);
+        padding: 12px 20px;
+      }
+      @media (min-width: 621px) and (max-width: 769.9px) {
+        @include font-style($size-medium - 2px, $weight-medium);
+        padding: 12px 20px;
+      }
+    }
+
+    @media (max-width: 320px) {
+      @include border-radius(3px);
+      max-width: 100%;
+      padding: 10px;
+      height: 300px;
+      max-height: 40%;
+      .messageImage {
+        width: 70px;
+        margin-top: 10px;
+      }
+
+      h4 {
+        @include font-style($size-medium, $weight-large);
+      }
+
+      p {
+        @include font-style($size-small, $weight-medium);
+      }
+
+      .messageBtn {
+        padding: 8px 15px;
+        @include font-style($size-medium - 2px, $weight-medium);
+        margin: 20px 0 10px 0;
+      }
+    }
+
+    @media (min-width: 321px) and (max-width: 470.9px) {
+      @include border-radius(3px);
+      max-width: 100%;
+      padding: 10px;
+      height: 300px;
+      max-height: 40%;
+      .messageImage {
+        width: 70px;
+        margin-top: 10px;
+      }
+
+      h4 {
+        @include font-style($size-medium, $weight-large);
+      }
+
+      p {
+        @include font-style($size-medium - 2px, $weight-medium);
+      }
+
+      .messageBtn {
+        padding: 8px 15px;
+        @include font-style($size-medium - 2px, $weight-medium);
+        margin: 20px 0 10px 0;
       }
     }
   }
